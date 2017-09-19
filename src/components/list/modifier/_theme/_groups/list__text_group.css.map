@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iBAAkB;EAChB,MAAM,EAAE,MAAM",
+"sources": ["list__text_group.scss"],
+"names": [],
+"file": "list__text_group.css"
+}

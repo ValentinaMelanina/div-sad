@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iBAAkB;EAChB,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,MAAM",
+"sources": ["list__img_group.scss"],
+"names": [],
+"file": "list__img_group.css"
+}

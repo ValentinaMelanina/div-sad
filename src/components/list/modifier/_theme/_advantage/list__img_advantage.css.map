@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,qBAAsB;EACpB,UAAU,EAAE,IAAI;EAEhB,yBAAM;IACP,MAAM,EAAE,IAAI;IACZ,KAAK,EAAE,IAAI",
+"sources": ["list__img_advantage.scss"],
+"names": [],
+"file": "list__img_advantage.css"
+}

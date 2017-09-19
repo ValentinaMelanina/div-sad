@@ -1,0 +1,13 @@
+.list__item_classes {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+}
+
+@media screen and (max-width: 48em) {
+  .list__item_classes {
+	height: auto;
+    display: block;
+  }
+}

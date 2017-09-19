@@ -1,0 +1,19 @@
+.list_advantage {
+  color: white;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 48em) {
+  .list_advantage {
+    text-align: left;
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+}
+@media screen and (max-width: 64em) {
+  .list_advantage {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+

@@ -1,0 +1,18 @@
+.list_classes {
+  margin: 0 6% 25px;
+}
+
+@media screen and (min-width: 48em) {
+  .list_classes {
+    margin-left: 6%;
+    margin-right: 6%;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 64em) {
+  .list_classes {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}

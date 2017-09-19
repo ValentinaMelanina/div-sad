@@ -1,0 +1,19 @@
+@charset "UTF-8";
+.list__item_star {
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  margin-right: 11px;
+  /* фигура рядом с элементом */ }
+  .list__item_star:after {
+    content: '\f005';
+    font-family: FontAwesome;
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #f0e020; }
+    .list__item_star:after:last-child:after {
+      content: none; }
+
+/*# sourceMappingURL=list__item_star.css.map */

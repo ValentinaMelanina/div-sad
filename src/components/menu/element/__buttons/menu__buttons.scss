@@ -1,0 +1,38 @@
+.action {
+  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.action:focus {
+  outline: none;
+}
+
+.action--open {
+  font-size: 1.5em;
+  top: 1em;
+  left: 1em;
+  display: none;
+  color: #000;
+  position: fixed;
+  z-index: 1000;
+}
+
+.action--close {
+  font-size: 1.1em;
+  top: 1.25em;
+  right: 1em;
+  display: none;
+  color: #45464e;
+}
+
+@media screen and (max-width: 40em) {
+  .action--open,
+  .action--close {
+    display: block;
+  }
+}
