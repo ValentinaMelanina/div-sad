@@ -14,11 +14,11 @@
 
 .action--open {
   font-size: 1.5em;
-  top: 1em;
-  left: 1em;
+  //top: 1em;
+  //left: 1em;
   display: none;
   color: #000;
-  position: fixed;
+  //position: fixed;
   z-index: 1000;
 }
 
@@ -30,7 +30,7 @@
   color: #45464e;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 64em) {
   .action--open,
   .action--close {
     display: block;

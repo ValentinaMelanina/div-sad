@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'feather';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/feather/feather.eot?1gafuo');
+  src: url('../fonts/feather/feather.eot?1gafuo#iefix') format('embedded-opentype'),
+        url('../fonts/feather/feather.woff2?1gafuo') format('woff2'),
+        url('../fonts/feather/feather.ttf?1gafuo') format('truetype'),
+        url('../fonts/feather/feather.woff?1gafuo') format('woff'),
+        url('../fonts/feather/feather.svg?1gafuo#feather') format('svg');
+}
+
 h1 {
   font-size: 30px;
   text-align: left;
@@ -5,7 +17,27 @@ h1 {
   text-transform: uppercase;
   line-height: 40px;
 }
+// Заголовок в header
 .header__heading {
   color: rgba(255, 255, 255, 0.94);
   text-shadow: 4px 2px 3px rgba(150, 150, 150, 0.68);
+}
+
+// Основной заголовок раздела (h2)
+.section_title {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+// Модификатор заголовка раздела
+.section_title-light {
+  color: white;
+}
+
+// Главный текст раздела
+.section__main-text {
+  font-size: 26px;
+  text-align: center;
+  padding: 0 20%;
+  line-height: 34px;
 }

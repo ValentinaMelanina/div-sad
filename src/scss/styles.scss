@@ -2,6 +2,7 @@
    Базовые стили
    ========================================================================== */
 @import "vendors/normalize";
+@import "vendors/flexboxgrid";
 @import "typography";
 @import "layout";
 
@@ -37,7 +38,7 @@
 @import "pages/index/advantage";
 
 /* Группы */
-@import "pages/index/group";
+@import "pages/index/groups";
 
 /* Кружки и секции */
 @import "pages/index/classes";

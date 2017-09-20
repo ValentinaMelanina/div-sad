@@ -24,8 +24,9 @@ gulp.task('autoprefixer', function(){
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         'src/js/vendors/*.js', // Берем js из vendors_js
+        'src/components/menu/_classie.js', // Берем js из компонентов
+        'src/components/menu/_mlpushmenu.js',
         'src/js/_layout.js', // Берем дополнительные скрипты шаблона
-        'src/components/**/**/**/**/*.js' // Берем js из компонентов
     ])
         .pipe(concat('scripts.js')) // Конкатенируем файлы в один src/js/scripts.js
         .pipe(gulp.dest('src/js')); // Выгружаем в папку src/js

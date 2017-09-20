@@ -4,21 +4,26 @@ block variables
 	- var  current = 'Главная'
 block content
 	// Преимущества
-	section
+	section.section
 		.advantage
 			.container
 				include ../../components/list/_list_advantage
 
 	//	Группы
-	section
+	section.section
 		.groups
 			.container
+				p.section__main-text
+					| В нашем детском саду есть группы подготовки к школе, в которых ребенок сможет своевременно
+					| познакомиться с первыми школьными предметами
 				include ../../components/list/_list_groups
 
 	//	Кружки и секции
-	section
+	section.section
 		.classes
 			.container
+				h2.section_title.section_title-light
+					| Кружки и секции
 				include ../../components/list/_list_classes
 
 

@@ -38,8 +38,9 @@
   color: #33353e;
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 64em) {
   .menu__breadcrumbs {
 	display: block;
+    left: 20%;
   }
 }
