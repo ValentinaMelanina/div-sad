@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,WAAY;EACV,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,KAAK;EACV,MAAM,EAAE,CAAC;EACT,QAAQ,EAAE,MAAM;EAChB,KAAK,EAAE,IAAI",
-"sources": ["menu__wrap.scss"],
-"names": [],
-"file": "menu__wrap.css"
-}

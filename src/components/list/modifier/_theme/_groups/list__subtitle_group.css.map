@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,qBAAsB;EACpB,SAAS,EAAE,IAAI;EACf,aAAa,EAAE,IAAI",
-"sources": ["list__subtitle_group.scss"],
-"names": [],
-"file": "list__subtitle_group.css"
-}

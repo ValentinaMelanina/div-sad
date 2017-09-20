@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,WAAY;EACV,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,iBAAiB",
-"sources": ["menu__item.scss"],
-"names": [],
-"file": "menu__item.css"
-}

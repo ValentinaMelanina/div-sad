@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,WAAY;EACV,WAAW,EAAE,KAAK;EAClB,cAAc,EAAE,KAAK",
-"sources": ["list__wrap.scss"],
-"names": [],
-"file": "list__wrap.css"
-}

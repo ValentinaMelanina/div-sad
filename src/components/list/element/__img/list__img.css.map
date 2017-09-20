@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,UAAW;EACT,QAAQ,EAAE,MAAM;EAChB,QAAQ,EAAE,QAAQ;EAElB,cAAM;IACJ,cAAc,EAAE,MAAM",
-"sources": ["list__img.scss"],
-"names": [],
-"file": "list__img.css"
-}

@@ -2,19 +2,19 @@
    Элементы
    ========================================================================== */
 /* Элемент списка */
-@import "element/__item/list__item";
+@import "element/list__item";
 
 /* Заголовок (title) */
-@import "element/__title/list__title";
+@import "element/list__title";
 
 /* Подзаголовок (subtitle) */
-@import "element/__subtitle/list__subtitle";
+@import "element/list__subtitle";
 
 /* Картинки */
-@import "element/__img/list__img";
+@import "element/list__img";
 
 /* Обвертка элемента списка */
-@import "element/__container/list__container";
+@import "element/list__container";
 
 /* ==========================================================================
    Модификаторы
@@ -25,7 +25,7 @@
 @import "modifier/_theme/_advantage/list__img_advantage";
 @import "modifier/_theme/_advantage/list__item_advantage";
 @import "modifier/_theme/_advantage/list__text_advantage";
-@import "modifier/_theme/_advantage/list__title_advantage";
+@import "../advantage/list__title_advantage";
 @import "modifier/_theme/_advantage/list_advantage";
 
 /* Тема – group */

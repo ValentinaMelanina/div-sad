@@ -29,12 +29,12 @@
 /* ==========================================================================
    Стили элементов
    ========================================================================== */
-@import "element/__wrap/menu__wrap.scss";
-@import "element/__level/menu__level.scss";
-@import "element/__item/menu__item.scss";
-@import "element/__link/menu__link.scss";
-@import "element/__breadcrumbs/menu__breadcrumbs.scss";
-@import "element/__back/menu__back.scss";
+@import "element/menu__wrap";
+@import "element/menu__level";
+@import "element/menu__item";
+@import "element/menu__link";
+@import "element/menu__breadcrumbs";
+@import "element/menu__back";
 
 
 /* ==========================================================================
@@ -66,7 +66,7 @@
 /* ==========================================================================
    Кнопки
    ========================================================================== */
-@import "element/__buttons/menu__buttons.scss";
+@import "element/menu__buttons";
 
 
 /* ==========================================================================
