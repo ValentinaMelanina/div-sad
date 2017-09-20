@@ -23,19 +23,19 @@ mixin submenu(submenu_item)
 
 
 // Меню
-//.container
-button.action.action--open(aria-label="Open Menu")
-	span.icon.icon--menu
+.header__menu
+	button.action.action--open(aria-label="Open Menu")
+		span.icon.icon--menu
 
-nav.menu.header-menu#ml-menu
-	button.action.action--close(aria-label="Close Menu")
-		span.icon.icon--cross
-	.menu__wrap
-		+menu(menu_item)
-		for submenu_item in menu
-			+submenu(submenu_item)
+	nav.menu.header-menu#ml-menu
+		button.action.action--close(aria-label="Close Menu")
+			span.icon.icon--cross
+		.menu__wrap
+			+menu(menu_item)
+			for submenu_item in menu
+				+submenu(submenu_item)
 
-.clearfix
+	.clearfix
 
 
 

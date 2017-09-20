@@ -1,0 +1,19 @@
+include _data
+
+mixin listAdvantage(item)
+	for item in listAdvantage
+		.list__container.col-xs-12.col-sm-4.col-lg-20
+			.list__item.list__item_advantage
+				.list__content.list__content_advantage
+					.list__img.list__img_advantage
+						img(src=item.list_img)
+					.list__title.list__title_advantage
+						=item.list_title
+					.list__text.list__text_advantage
+						=item.list_text
+
+// Преимущества
+.list.list_advantage.row.center-xs.start-md.between-lg
+	+listAdvantage(item)
+
+

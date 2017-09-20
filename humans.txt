@@ -1,0 +1,24 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+/*  TEAM  */
+  Developer: Melanina Valentina
+  	Contact: hello [at] melanina.ru
+  	From: Russia, Moscow
+
+/* SITE */
+    Site name: Сайт частного детского сада
+    Site URL:
+	Last update: 2017/09/21
+	Language: Russian
+	Doctype: HTML
+	IDE: PhpStorm, FileZilla, Gulp, YUI Compressor (CSS/JS)
+	Software: Photoshop
+	Browser: > IE 11
+	CMS: Битрикс
+
+/*  TECHNOLOGY COLOPHON  */
+    Standards: HTML5, CSS3
+    Components: JavaScript, JQuery
+    Languages: Pug, SCSS
+

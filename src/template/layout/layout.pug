@@ -1,0 +1,22 @@
+include ../../helpers/variables
+doctype html
+html
+	head
+		include head.pug
+
+	body
+		.wrapper
+			// Header
+			include header.pug
+
+			// Main
+			.main
+				block variables
+				block content
+
+
+
+			// Footer
+			include footer.pug
+
+

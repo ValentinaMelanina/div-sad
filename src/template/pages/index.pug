@@ -1,0 +1,25 @@
+extends ../layout/layout.pug
+
+block variables
+	- var  current = 'Главная'
+block content
+	// Преимущества
+	section
+		.advantage
+			.container
+				include ../../components/list/_list_advantage
+
+	//	Группы
+	section
+		.groups
+			.container
+				include ../../components/list/_list_groups
+
+	//	Кружки и секции
+	section
+		.classes
+			.container
+				include ../../components/list/_list_classes
+
+
+

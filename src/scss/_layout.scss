@@ -1,0 +1,69 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: Marmelad, Roboto, "Open Sans", Arial, sans-serif;
+}
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+header,
+footer {
+  width: 100%;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+header {
+  background: url("../images/header.jpg") no-repeat center /cover;
+}
+
+/* Топ бар */
+.header__top-bar {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-radius: 0 0 20px 20px;
+  background: white;
+  z-index: 99999;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+/* Контейнер для основного контента */
+.header__container {
+  padding: 25% 10%;
+  display: flex;
+}
+/* Логотип */
+.header__logo {
+  width: 220px;
+  height: 220px;
+  flex: none;
+  margin-right: 6%;
+  
+  & img {
+	height: auto;
+	width: 100%;
+  }
+}
+
+

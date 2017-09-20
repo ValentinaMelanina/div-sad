@@ -8,25 +8,26 @@
     <link href="https://fonts.googleapis.com/css?family=Marmelad" rel="stylesheet">
     <link href="../_styles.css" rel="stylesheet">
     <!--	JS-->
-    <script src="../_modernizr.custom.js"></script>
+    <script src="_modernizr.custom.js"></script>
   </head>
   <body>
     <!-- Меню-->
-    <!--.container-->
-    <button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
-    <nav class="menu header-menu" id="ml-menu">
-      <button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
-      <div class="menu__wrap">
-            <ul class="menu__level menu_theme-main" data-menu="main">
-              <li class="menu__item"><a class="menu__link active" href="#">Главная</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">О компании</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Услуги</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Цены</a></li>
-              <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
-            </ul>
-      </div>
-    </nav>
-    <div class="clearfix"></div>
+    <div class="header__menu">
+      <button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
+      <nav class="menu header-menu" id="ml-menu">
+        <button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+        <div class="menu__wrap">
+              <ul class="menu__level menu_theme-main" data-menu="main">
+                <li class="menu__item"><a class="menu__link active" href="#">Главная</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">О компании</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Услуги</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Цены</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+              </ul>
+        </div>
+      </nav>
+      <div class="clearfix"></div>
+    </div>
     <!-- JS-->
     <!--script(src="https://code.jquery.com/jquery-3.2.1.min.js")-->
     <script src="../_classie.js"></script>
