@@ -1,0 +1,97 @@
+/* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
+.advantage {
+  background: #f67283;
+  position: relative;
+  padding-bottom: 70px;
+  
+  &:after {
+	content: "";
+	position: absolute;
+	background: url(../images/flowers-border.svg) repeat-x left bottom / 500px auto;
+	height: 202px;
+	width: 100%;
+	top: -202px;
+	left: 0;
+	z-index: 1;
+  }
+}
+
+/* СПИСОК С ПРЕИМУЩЕСТВАМИ */
+
+/* Основной стиль списка */
+.advantage-list {
+  color: white;
+  margin-bottom: 25px;
+  padding: 0 4%;
+}
+@media screen and (min-width: 48em) {
+  .advantage-list {
+	text-align: left;
+  }
+}
+@media screen and (max-width: 64em) {
+  .advantage-list {
+	padding: 0 2%;
+  }
+}
+
+/* Контейнер */
+.advantage-list__container {
+  padding: 0 15px;
+  margin-bottom: 90px;
+  flex-grow:1;
+  display: flex;
+}
+@media screen and (max-width: 64em) {
+  .advantage-list .advantage-list__container{
+	margin-bottom: 30px;
+	
+	&:last-child {
+	  margin-bottom: 90px;
+	}
+  }
+}
+
+
+/* Элемент списка */
+.advantage-list__item {
+  flex-grow:1;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: flex-start;
+}
+@media screen and (max-width: 64em) {
+  .advantage-list__item {
+	align-items: center;
+  }
+}
+
+/* Картинка */
+.advantage-list__img {
+  height: 85px;
+  margin-bottom: 35px;
+  overflow: hidden;
+  
+  & img {
+	max-height: 100%;
+	max-width: 100%;
+  }
+}
+@media screen and (max-width: 48em) {
+  .advantage-list__img {
+	justify-content: center;
+  }
+}
+
+/* Заголовок */
+.advantage-list__title {
+  margin: 0 0 30px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Текст */
+.advantage-list__text {
+  margin: auto;
+}

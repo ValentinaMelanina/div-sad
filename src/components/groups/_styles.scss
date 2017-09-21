@@ -1,0 +1,98 @@
+/* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
+.groups {
+  padding: 90px 0;
+  position: relative;
+  
+  &:after {
+	content: "";
+	position: absolute;
+	background: url(../images/wave-white.png) repeat-x left bottom / 500px auto;
+	height: 45px;
+	width: 100%;
+	top: -70px;
+	left: 0;
+	z-index: 1;
+  }
+}
+
+
+/* СПИСОК С ПРЕИМУЩЕСТВАМИ */
+
+/* Основной стиль списка */
+.group-list {
+  margin: 0 6% 25px;
+}
+@media screen and (min-width: 48em) {
+  .group-list {
+	margin-left: 6%;
+	margin-right: 6%;
+	text-align: left;
+  }
+}
+@media screen and (max-width: 64em) {
+  .group-list {
+	margin-left: 2%;
+	margin-right: 2%;
+  }
+}
+
+/* Контейнер */
+
+
+/* Элемент списка */
+.group-list__item {
+  display: flex;
+}
+@media screen and (max-width: 64em) {
+  .group-list__item {
+	display: block;
+  }
+}
+
+/* Контейнер для контента */
+.group-list__content {
+  margin: 25px;
+}
+@media screen and (max-width: 64em) {
+  .group-list__content {
+	margin-top: 0;
+  }
+}
+
+/* Картинка */
+.group-list__img {
+  min-width: 90px;
+  height: 90px;
+  text-align: center;
+  margin: 25px;
+  align-self: flex-start;
+  overflow: hidden;
+  position: relative;
+  
+  & img {
+	vertical-align: middle;
+	max-height: 100%;
+	max-width: 100%;
+  }
+}
+@media screen and (max-width: 64em) {
+  .group-list__img {
+	margin-bottom: 35px;
+  }
+}
+
+/* Заголовок */
+.group-list__title {
+  margin: 10px 0 25px;
+}
+
+/* Подзаголовок */
+.group-list__subtitle {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+/* Текст */
+.group-list__text {
+  margin: 25px 0;
+}

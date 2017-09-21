@@ -15,37 +15,3 @@
 
 /* Обвертка элемента списка */
 @import "element/list__container";
-
-/* ==========================================================================
-   Модификаторы
-   ========================================================================== */
-/* ТЕМЫ */
-/* Тема – advantage */
-@import "modifier/_theme/_advantage/list__content_advantage";
-@import "modifier/_theme/_advantage/list__img_advantage";
-@import "modifier/_theme/_advantage/list__item_advantage";
-@import "modifier/_theme/_advantage/list__text_advantage";
-@import "../advantage/list__title_advantage";
-@import "modifier/_theme/_advantage/list_advantage";
-
-/* Тема – group */
-@import "modifier/_theme/_groups/list__img_group";
-@import "modifier/_theme/_groups/list__content_group";
-@import "modifier/_theme/_groups/list__group";
-@import "modifier/_theme/_groups/list__subtitle_group";
-@import "modifier/_theme/_groups/list__text_group";
-@import "modifier/_theme/_groups/list__title_group";
-@import "modifier/_theme/_groups/list__item_group";
-
-/* Тема – classes */
-@import "modifier/_theme/_classes/list__img_classes";
-@import "modifier/_theme/_classes/list__content_classes";
-@import "modifier/_theme/_classes/list__classes";
-@import "modifier/_theme/_classes/list__subtitle_classes";
-@import "modifier/_theme/_classes/list__text_classes";
-@import "modifier/_theme/_classes/list__title_classes";
-@import "modifier/_theme/_classes/list__item_classes";
-
-/* Тема – star */
-@import "modifier/_theme/_star/list__item_star";
-@import "modifier/_theme/_star/list_star";

@@ -18,24 +18,26 @@ h1 {
   line-height: 40px;
 }
 // Заголовок в header
-.header__heading {
+.page-title {
   color: rgba(255, 255, 255, 0.94);
   text-shadow: 4px 2px 3px rgba(150, 150, 150, 0.68);
+  font-weight: normal;
 }
 
 // Основной заголовок раздела (h2)
-.section_title {
+.section-title {
   font-size: 30px;
   text-align: center;
   margin-bottom: 60px;
+  color: white;
 }
 // Модификатор заголовка раздела
-.section_title-light {
+.section-title_light {
   color: white;
 }
 
 // Главный текст раздела
-.section__main-text {
+.section-description {
   font-size: 26px;
   text-align: center;
   padding: 0 20%;

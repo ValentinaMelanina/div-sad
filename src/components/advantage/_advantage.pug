@@ -1,0 +1,19 @@
+include _data
+
+mixin listAdvantage(item)
+	for item in listAdvantage
+		.advantage-list__container.col-xs-12.col-sm-4.col-lg-20
+			.advantage-list__item
+				.advantage-list__img
+					img(src=item.list_img)
+				.advantage-list__title
+					=item.list_title
+				.advantage-list__text
+					=item.list_text
+
+// Преимущества
+.advantage-list.row.center-xs.start-md.between-lg
+	+listAdvantage(item)
+
+// Записаться на бесплатное посещение
+button.button.button_theme-secondary.button_size-l.waves-effect Записаться на бесплатное посещение

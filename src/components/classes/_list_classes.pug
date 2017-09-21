@@ -1,24 +1,24 @@
-include ../list/_data
+include _data
 
 mixin listClasses(item)
 	for item in listClasses
-		.list__container.col-xs-12.col-sm-6
-			.list__item.list__item_classes
-				.list__img.list__img_classes
+		.classes-list__container.col-xs-12.col-sm-6
+			.classes-list__item
+				.classes-list__img
 					img(src=item.list_img)
-				.list__content.list__content_classes
-					.list__title.list__title_classes
+				.classes-list__content
+					.classes-list__title
 						=item.list_title
-					.list__text.list__text_classes
+					.classes-list__text
 						=item.list_text
-					.list.list_star.row.start-xs
+					.classes-info.row.start-xs
 						for item_2 in item.list_star
-							.list__item.list__item_star
-								.list__text.list__text_star
+							.classes-info__item
+								.classes-info__text
 									=item_2.list_text
 
 
 // Кружки и секции
-.list.list_classes.row.center-xs
+.classes-list.row.center-xs
 	+listClasses(item)
 

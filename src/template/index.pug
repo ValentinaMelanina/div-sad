@@ -1,0 +1,27 @@
+extends ../components/layout/layout_index
+
+block variables
+	- var  current = 'Главная'
+block content
+	// Преимущества
+	section.advantage
+		.container
+			include ../components/advantage/_advantage
+
+	//	Группы
+	section.groups
+		.container
+			p.section-description
+				| В нашем детском саду есть группы подготовки к школе, в которых ребенок сможет своевременно
+				| познакомиться с первыми школьными предметами
+			include ../components/groups/_groups
+
+	//	Кружки и секции
+	section.classes
+		.container
+			h2.section-title.section-title_light
+				| Кружки и секции
+			include ../components/classes/_list_classes
+
+
+

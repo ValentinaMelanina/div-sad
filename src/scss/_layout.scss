@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  font-size: 16px;
+  font-size: 14px;
   font-family: Marmelad, Roboto, "Open Sans", Arial, sans-serif;
   line-height: 22px;
 }
@@ -16,7 +16,7 @@ body {
 .container {
   position: relative;
   max-width: 1170px;
-  padding: 0 20px;
+  padding: 90px 20px;
   margin: 0 auto;
 }
 .main {
@@ -24,57 +24,9 @@ body {
   height: 100%;
   flex: 1;
 }
-header,
 footer {
   width: 100%;
 }
 
-/* ==========================================================================
-   Header
-   ========================================================================== */
-header {
-  background: url("../images/header.jpg") no-repeat center /cover;
-}
-
-/* Топ бар */
-.header__top-bar {
-  position: fixed;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 40px;
-  border-radius: 0 0 20px 20px;
-  background: white;
-  z-index: 99999;
-  max-width: 1170px;
-  width: inherit;
-  margin: 0 auto;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-@media screen and (max-width: 64em) {
-  .header__top-bar {
-    padding: 0;
-  }
-}
-
-/* Контейнер для основного контента */
-.header__container {
-  padding: 25% 10%;
-  display: flex;
-}
-
-/* Логотип */
-.header__logo {
-  width: 220px;
-  height: 220px;
-  flex: none;
-  margin-right: 6%;
-  
-  & img {
-	height: auto;
-	width: 100%;
-  }
-}
 
 
