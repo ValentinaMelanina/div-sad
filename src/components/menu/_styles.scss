@@ -6,70 +6,224 @@
 }
 @media screen and (max-width: 64em) {
   .menu {
-	top: 0;
-	width: 100%;
-	margin-left: -20%;
-	background: #1c1d22;
-		-webkit-transform: translate3d(-100%, 0, 0);
-	transform: translate3d(-100%, 0, 0);
-		-webkit-transition: -webkit-transform 0.3s;
-	transition: transform 0.3s;
-	z-index: 1000;
+	
   }
-  .menu--open {
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-	height: 100vh;
-	position: fixed;
-  }
-  
 }
 
+
+@media screen and (max-width: 64em) {
+  .menu__wrap {
+	position: absolute;
+	top: 3.5em;
+	left: 20%;
+	bottom: 0;
+	overflow: hidden;
+	width: 100%;
+  }
+}
 
 /* ==========================================================================
    Стили элементов
    ========================================================================== */
-@import "element/menu__wrap";
-@import "element/menu__level";
-@import "element/menu__item";
-@import "element/menu__link";
-@import "element/menu__breadcrumbs";
-@import "element/menu__back";
+/* Элемент меню */
+.main-menu__item {
+  display: inline-block;
+  position: relative;
+}
+.main-menu__item:after{
+  content: '\f005';
+  font-family: FontAwesome;
+  font-size: 10px;
+  position: absolute;
+  top: 15.5px;
+  right: 0;
+  color: #f0e020;
+  
+}
+.main-menu .main-menu__item:last-child:after {
+  content: none;
+}
+
+// Стили для ссылок
+.main-menu a {
+  text-decoration: none;
+}
+.main-menu__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  outline: none;
+  position: relative;
+  display: block;
+  padding: 1em 2.5em 1em 1.5em;
+  color: #000;
+  -webkit-transition: color 0.1s;
+  transition: color 0.1s;
+  
+  &:hover,
+  &:focus,
+  &[data-submenu]:hover::after,
+  &[data-submenu]:focus::after {
+	color: #f0e020;
+  }
+}
+// Активный пункт подменю
 
 
-/* ==========================================================================
-   Иконки (made with Icomoon.io)
-   ========================================================================== */
-.icon {
-  font-family: 'feather';
-  font-weight: normal;
-  font-style: normal;
-  font-variant: normal;
-  line-height: 1;
+@media screen and (max-width: 64em) {
+	.main-menu {
+	  display: none;
+	  
+	  &.active {
+	  display: block;
+	}
+	}
+}
+
+
+// Кнопка мобильного меню (hamburger)
+// ==================================================
+
+$hamburger-padding-x                       : 15px !default;
+$hamburger-padding-y                       : 15px !default;
+$hamburger-layer-width                     : 40px !default;
+$hamburger-layer-height                    : 4px !default;
+$hamburger-layer-spacing                   : 6px !default;
+$hamburger-layer-color                     : #000 !default;
+$hamburger-layer-border-radius             : 4px !default;
+$hamburger-hover-opacity                   : 0.7 !default;
+$hamburger-hover-transition-duration       : 0.15s !default;
+$hamburger-hover-transition-timing-function: linear !default;
+
+// To use CSS filters as the hover effect instead of opacity,
+// set $hamburger-hover-use-filter as true and
+// change the value of $hamburger-hover-filter accordingly.
+$hamburger-hover-use-filter: false !default;
+$hamburger-hover-filter    : opacity(50%) !default;
+
+// Основные стили для кнопки вызова мобильного меню
+// ==================================================
+.hamburger {
+  padding: $hamburger-padding-y $hamburger-padding-x;
+  display: none;
+  cursor: pointer;
+  
+  transition-property: opacity, filter;
+  transition-duration: $hamburger-hover-transition-duration;
+  transition-timing-function: $hamburger-hover-transition-timing-function;
+  
+  // Normalize (<button>)
+  font: inherit;
+  color: inherit;
   text-transform: none;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  speak: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  
+  &:hover {
+	@if $hamburger-hover-use-filter == true {
+	  filter: $hamburger-hover-filter;
+	}
+	@else {
+	  opacity: $hamburger-hover-opacity;
+	}
+  }
 }
-.icon--arrow-left:before {
-  content: '\e901';
+.hamburger-box {
+  width: $hamburger-layer-width;
+  height: $hamburger-layer-height * 3 + $hamburger-layer-spacing * 2;
+  display: inline-block;
+  position: relative;
 }
-.icon--menu:before {
-  content: '\e903';
-}
-.icon--cross:before {
-  content: '\e117';
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: $hamburger-layer-height / -2;
+  
+  &,
+  &::before,
+  &::after {
+	width: $hamburger-layer-width;
+	height: $hamburger-layer-height;
+	background-color: $hamburger-layer-color;
+	border-radius: $hamburger-layer-border-radius;
+	position: absolute;
+	transition-property: transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease;
+  }
+  
+  &::before,
+  &::after {
+	content: "";
+	display: block;
+  }
+  
+  &::before {
+	top: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+  }
+  
+  &::after {
+	bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
+  }
 }
 
+@media screen and (max-width: 64em) {
+  .hamburger {
+	display: inline-block;
+  }
+}
 
-/* ==========================================================================
-   Кнопки
-   ========================================================================== */
-@import "element/menu__buttons";
+// Hamburger types – Emphatic
+// ==================================================
+.hamburger--emphatic {
+	overflow: hidden;
+	
+	.hamburger-inner {
+	  transition: background-color 0.125s 0.175s ease-in;
+	  
+	  &::before {
+		left: 0;
+		transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+		top 0.05s 0.125s linear,
+		left 0.125s 0.175s ease-in;
+	  }
+	  
+	  &::after {
+		top: ($hamburger-layer-height) + ($hamburger-layer-spacing);
+		right: 0;
+		transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+		top 0.05s 0.125s linear,
+		right 0.125s 0.175s ease-in;
+	  }
+	}
+	
+	&.is-active {
+	  .hamburger-inner {
+		transition-delay: 0s;
+		transition-timing-function: ease-out;
+		background-color: transparent;
+		
+		&::before {
+		  left: $hamburger-layer-width * -2;
+		  top: $hamburger-layer-width * -2;
+		  transform: translate3d($hamburger-layer-width * 2, $hamburger-layer-width * 2, 0) rotate(45deg);
+		  transition: left 0.125s ease-out,
+		  top 0.05s 0.125s linear,
+		  transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+		}
+		
+		&::after {
+		  right: $hamburger-layer-width * -2;
+		  top: $hamburger-layer-width * -2;
+		  transform: translate3d($hamburger-layer-width * -2, $hamburger-layer-width * 2, 0) rotate(-45deg);
+		  transition: right 0.125s ease-out,
+		  top 0.05s 0.125s linear,
+		  transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+		}
+	  }
+	}
+  }
 
-
-/* ==========================================================================
-   Модификаторы
-   ========================================================================== */
-@import "modifier/_theme/main";

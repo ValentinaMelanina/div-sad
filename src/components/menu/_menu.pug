@@ -2,21 +2,21 @@ include _data
 
 
 mixin menu(menu_item)
-	ul.menu__level.menu_theme-main(data-menu="main")
+	ul.main-menu
 		for item in menu
 			if item.submenu
 				- var data = ("submenu-" + item.item_data);
-			li.menu__item
-				a.menu__link(href =item.link_item,
+			li.main-menu__item
+				a.main-menu__link(href =item.link_item,
 						class = {active: item.name_item === current}, data-submenu=data)=item.name_item
 
 
 mixin submenu(submenu_item)
 	if (submenu_item.submenu)
-		ul.menu__level(data-menu=("submenu-" + submenu_item.item_data))
+		ul.submenu
 			for item in submenu_item.submenu
-				li.menu__item
-					a.menu__link(href =item.link_item class = {active: item.name_item === current_submenu})=item.name_item
+				li.submenu__item
+					a.submenu__link(href =item.link_item class = {active: item.name_item === current_submenu})=item.name_item
 
 
 
@@ -24,18 +24,16 @@ mixin submenu(submenu_item)
 
 // Меню
 .header__menu
-	button.action.action--open(aria-label="Open Menu")
-		span.icon.icon--menu
+	button.hamburger.hamburger--emphatic
+		span.hamburger-box
+			span.hamburger-inner
 
-	nav.menu#ml-menu
-		button.action.action--close(aria-label="Close Menu")
-			span.icon.icon--cross
-		.menu__wrap
-			+menu(menu_item)
-			for submenu_item in menu
-				+submenu(submenu_item)
+	+menu(menu_item)
+	for submenu_item in menu
+		+submenu(submenu_item)
 
 	.clearfix
+
 
 
 

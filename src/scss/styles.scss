@@ -2,9 +2,10 @@
    Базовые стили
    ========================================================================== */
 @import "vendors/normalize";
+@import "../components/layout/layout";
 @import "vendors/flexboxgrid";
 @import "typography";
-@import "layout";
+
 
 /* ==========================================================================
    Компоненты (блоки)

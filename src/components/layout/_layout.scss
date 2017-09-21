@@ -4,7 +4,7 @@ body {
 }
 
 body {
-  font-size: 14px;
+  font-size: 16px;
   font-family: Marmelad, Roboto, "Open Sans", Arial, sans-serif;
   line-height: 22px;
 }
@@ -18,6 +18,12 @@ body {
   max-width: 1170px;
   padding: 90px 20px;
   margin: 0 auto;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 64em) {
+  .container {
+    padding: 10% 20px;
+  }
 }
 .main {
   width: 100%;

@@ -9,23 +9,24 @@
 
 /* Топ бар */
 .header__top-bar {
-  position: fixed;
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
   border-radius: 0 0 20px 20px;
   background: white;
-  z-index: 99999;
   max-width: 1170px;
-  width: inherit;
   margin: 0 auto;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  z-index: 99999;
 }
 @media screen and (max-width: 64em) {
   .header__top-bar {
-	padding: 0;
+    
+    & .button {
+      display: none;
+    }
   }
 }
 
