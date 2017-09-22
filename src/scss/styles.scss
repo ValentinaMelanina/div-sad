@@ -1,9 +1,14 @@
 /* ==========================================================================
    Базовые стили
    ========================================================================== */
+/* Подключаемые стили */
 @import "vendors/normalize";
-@import "../components/layout/layout";
 @import "vendors/flexboxgrid";
+
+/* Макет сайта */
+@import "../common.blocks/layout/styles";
+
+/* Оформление основного текста */
 @import "typography";
 
 
@@ -11,25 +16,25 @@
    Компоненты (блоки)
    ========================================================================== */
 /* Header */
-@import "../components/header/header";
+@import "../common.blocks/header/header";
 
 /* Меню */
-@import "../components/menu/styles";
+@import "../common.blocks/menu/styles";
 
 /* Общие стили для списков */
-//@import "../components/list/styles";
+//@import "../common.blocks/list/styles";
 
 /* Блок с преимуществами */
-@import "../components/advantage/styles";
+@import "../common.blocks/advantage/styles";
 
 /* Блок с группами */
-@import "../components/groups/styles";
+@import "../common.blocks/groups/styles";
 
 /* Блок с кружками и секциями */
-@import "../components/classes/styles";
+@import "../common.blocks/classes/styles";
 
 /* Кнопки */
-@import "../components/button/styles";
+@import "../common.blocks/button/styles";
 
 
 
