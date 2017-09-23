@@ -8,10 +8,12 @@
 }
 
 /* Топ бар */
+// ==================================================
 .header__top-bar {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
+  padding: 20px;
   border-radius: 0 0 20px 20px;
   background: white;
   max-width: 1170px;
@@ -23,20 +25,29 @@
 }
 @media screen and (max-width: 64em) {
   .header__top-bar {
-    
-    & .button {
-      display: none;
-    }
+    padding: 5px 15px 5px 5px;
   }
 }
 
+
 /* Контейнер для основного контента */
+// ==================================================
 .header__container {
-  padding: 25% 10%;
+  padding: 180px 70px 240px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+@media screen and (max-width: 64em) {
+  .header__container {
+    padding: 25% 10%;
+    display: flex;
+  }
 }
 
 /* Логотип */
+// ==================================================
 .header__logo {
   width: 220px;
   height: 220px;
@@ -49,14 +60,37 @@
   }
 }
 
+/* Меню */
+// ==================================================
+.header__menu { }
+
+
 /* Контакты */
+// ==================================================
 .header__contacts {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 200;
 }
+
 /* Телефон */
+// ==================================================
 .header__phone {
   font-size: 18px;
   margin-right: 30px;
 }
+@media screen and (max-width: 75em) {
+  .header__phone {
+    margin-right: 0;
+  }
+}
+
+/* Кнопка обратного звонка */
+// ==================================================
+@media screen and (max-width: 75em) {
+  .button.header__button-call-back {
+      display: none;
+    }
+}
+

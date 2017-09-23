@@ -29,6 +29,7 @@ var path = {
         html: 'src/template/**/**/*.html',
         js: [
             'src/js/vendors/*.js',
+            'src/common.blocks/**/**/*.js',
             'src/js/_custom-scripts.js',
         ],
         style: 'src/scss/styles.scss',
@@ -37,12 +38,13 @@ var path = {
     },
     watch: {
         html: 'src/template/**/**/*.html',
-        js: 'src/js/**/**/*.js',
+        js: 'src/**/**/**/*.js',
         style: 'src/**/**/**/*.scss',
         img: 'src/images/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     clean: './dist'
+
 };
 
 var config = {
@@ -140,5 +142,8 @@ gulp.task('watch', function(){
     });
 });
 
+gulp.task('clear', function (callback) {
+    return cache.clearAll();
+});
 
 gulp.task('default', ['build', 'webserver', 'watch']);

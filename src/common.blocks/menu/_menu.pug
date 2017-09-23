@@ -1,36 +1,23 @@
-include _data
-
-
-mixin menu(menu_item)
-	ul.main-menu
-		for item in menu
-			if item.submenu
-				- var data = ("submenu-" + item.item_data);
-			li.main-menu__item
-				a.main-menu__link(href =item.link_item,
-						class = {active: item.name_item === current}, data-submenu=data)=item.name_item
-
-
-mixin submenu(submenu_item)
-	if (submenu_item.submenu)
-		ul.submenu
-			for item in submenu_item.submenu
-				li.submenu__item
-					a.submenu__link(href =item.link_item class = {active: item.name_item === current_submenu})=item.name_item
-
-
-
+mixin navLink(link, name)
+	li.main-menu__item
+		a.main-menu__link(
+		href = link
+		class = {active: name === current}
+		) #{name}
 
 
 // Меню
 .header__menu
-	button.hamburger.hamburger--emphatic
-		span.hamburger-box
-			span.hamburger-inner
-
-	+menu(menu_item)
-	for submenu_item in menu
-		+submenu(submenu_item)
+	.main-menu__wrap
+		button.hamburger.hamburger--emphatic
+			span.hamburger-box
+				span.hamburger-inner
+		ul.main-menu
+			+navLink ('/', 'О детском саде')
+			+navLink ('#', 'Группы')
+			+navLink ('#', 'Кружки и секции')
+			+navLink ('#', 'Расписание')
+			+navLink ('#', 'Контакты')
 
 	.clearfix
 

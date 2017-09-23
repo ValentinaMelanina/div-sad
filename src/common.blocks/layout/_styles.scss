@@ -2,19 +2,23 @@ html,
 body {
   height: 100%;
 }
-
 body {
   font-size: 16px;
   font-family: Marmelad, Roboto, "Open Sans", Arial, sans-serif;
   line-height: 22px;
 }
+/* Обвертка сайта */
+// ==================================================
 .wrapper {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-}
-.container {
   position: relative;
+}
+
+/* Основной контейнер */
+// ==================================================
+.container {
   max-width: 1170px;
   padding: 90px 20px;
   margin: 0 auto;
@@ -25,6 +29,9 @@ body {
     padding: 10% 20px;
   }
 }
+
+/* Основное содержимое сайта */
+// ==================================================
 .main {
   width: 100%;
   height: 100%;
