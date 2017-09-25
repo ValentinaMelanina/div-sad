@@ -1,0 +1,317 @@
+/* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
+// ==================================================
+.schedule {
+  background: #f67283;
+  position: relative;
+  padding-bottom: 70px;
+  
+  &:after {
+	content: "";
+	position: absolute;
+	background: url(../images/flowers-border.svg) repeat-x left bottom / 500px auto;
+	height: 202px;
+	width: 100%;
+	top: -202px;
+	left: 0;
+	z-index: 1;
+  }
+}
+
+
+/* СПИСОК С ПРЕИМУЩЕСТВАМИ */
+// ==================================================
+
+/* Основной стиль списка */
+// ==================================================
+.schedule-list {
+  color: white;
+  margin-bottom: 175px;
+  padding: 0 4%;
+}
+@media screen and (min-width: 48em) {
+  .schedule-list {
+	text-align: left;
+  }
+}
+@media screen and (max-width: 64em) {
+  .schedule-list {
+	padding: 0 2%;
+	margin-bottom: 125px;
+  }
+}
+@media screen and (max-width: 48em) {
+  .schedule-list {
+	margin-bottom: 0;
+  }
+}
+
+/* Контейнер */
+// ==================================================
+.schedule-list__container {
+  padding: 0 15px;
+  flex-grow:1;
+  display: flex;
+}
+@media screen and (max-width: 64em) {
+  .schedule-list .schedule-list__container{
+	margin-bottom: 70px;
+	
+	&:last-child {
+	  margin-bottom: 90px;
+	}
+  }
+}
+@media screen and (max-width: 48em) {
+  .schedule-list .schedule-list__container {
+  
+	&:last-child {
+	  margin-bottom: 0;
+	}
+  }
+}
+
+
+/* Элемент списка */
+// ==================================================
+.schedule-list__item {
+  flex-grow:1;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: flex-start;
+}
+@media screen and (max-width: 64em) {
+  .schedule-list__item {
+	align-items: center;
+  }
+}
+
+/* Картинка */
+// ==================================================
+.schedule-list__img {
+  height: 85px;
+  margin-bottom: 35px;
+  overflow: hidden;
+  
+  & img {
+	max-height: 100%;
+	max-width: 100%;
+  }
+}
+@media screen and (max-width: 48em) {
+  .schedule-list__img {
+	justify-content: center;
+  }
+}
+
+/* Заголовок */
+// ==================================================
+.schedule-list__title {
+  margin: 0 0 30px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Текст */
+// ==================================================
+.schedule-list__text {
+  margin: auto;
+}
+
+
+/* КНОПКА */
+// ==================================================
+.schedule-btn  {
+  text-align: center;
+  
+  &__wrap {
+	display: inline-block;
+	position: relative;
+ 
+	&:after,
+	&:before {
+	  content: '';
+	  position: absolute;
+	  z-index: 2;
+	}
+ 
+	&:after {
+	  height: 90px;
+	  width: 90px;
+	  top: -85px;
+	  left: 30px;
+	  background: url("../images/owl-1.svg") no-repeat left bottom / auto 90px;
+	}
+ 
+	&:before {
+	  background: url("../images/star-empty.svg") no-repeat left bottom / auto 30px;
+	  height: 40px;
+	  width: 40px;
+	  bottom: -21px;
+	  left: 125px;
+	  transform: rotate(100deg);
+	}
+  }
+}
+.schedule-btn__container-first {
+  
+  &:before {
+	background: url("../images/star-empty.svg") no-repeat left bottom / auto 20px;
+	height: 30px;
+	width: 30px;
+	right: 35px;
+	top: -15px;
+	transform: rotate(45deg);
+	content: '';
+	position: absolute;
+	z-index: 2;
+  }
+}
+@media screen and (max-width: 48em) {
+  .schedule-btn {
+	display: none;
+  }
+}
+
+
+
+/* Расписание занятий */
+// ==================================================
+/* Табы */
+.r-tabs {
+  position: relative;
+  
+  background-color: #00c5ad;
+  
+  border-top: 1px solid #00c5ad;
+  border-right: 1px solid #00c5ad;
+  border-left: 1px solid #00c5ad;
+  border-bottom: 4px solid #00c5ad;
+  border-radius: 4px;
+  
+}
+
+/* Элемент */
+.r-tabs .r-tabs-nav .r-tabs-tab {
+  position: relative;
+  background-color: #00c5ad;
+}
+
+/* Сссылка */
+.r-tabs .r-tabs-nav .r-tabs-anchor {
+  display: inline-block;
+  padding: 10px 12px;
+  
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* вкладка - Disabled */
+.r-tabs .r-tabs-nav .r-tabs-state-disabled {
+  opacity: 0.5;
+}
+
+/* Активная ссылка */
+.r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor {
+  color: #00c5ad;
+  text-shadow: none;
+  
+  background-color: white;
+  
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+/* Панель вкладок */
+.r-tabs .r-tabs-panel {
+  background-color: white;
+  
+  border-bottom: 4px solid white;
+  
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  
+}
+
+/* Ссылки в аккордионе */
+.r-tabs .r-tabs-accordion-title .r-tabs-anchor {
+  display: block;
+  padding: 10px;
+  
+  background-color: #00c5ad;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+  font-size: 14px;
+  
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+/* Активная ссылка в аккордионе */
+.r-tabs .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
+  background-color: #fff;
+  color: #00c5ad;
+  text-shadow: none;
+}
+
+/* Disabled кнопка в аккордионе */
+.r-tabs .r-tabs-accordion-title.r-tabs-state-disabled {
+  opacity: 0.5;
+}
+
+/* Инфо бар */
+.info {
+  display:inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px 20px;
+  width: 300px;
+  line-height: 100%;
+  
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 14px;
+  color: #00c5ad;
+  border: 2px solid #00ab94;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #fff;
+  
+  cursor: pointer;
+}
+
+.r-tabs .r-tabs-nav {
+  margin: 0;
+  padding: 0;
+}
+.r-tabs .r-tabs-tab {
+  display: inline-block;
+  margin: 0;
+  list-style: none;
+}
+.r-tabs .r-tabs-panel {
+  padding: 15px;
+  display: none;
+}
+.r-tabs .r-tabs-accordion-title {
+  display: none;
+}
+.r-tabs .r-tabs-panel.r-tabs-state-active {
+  display: block;
+}
+/* Аккордион */
+@media only screen and (max-width: 768px) {
+  .r-tabs .r-tabs-nav {
+	display: none;
+  }
+  
+  .r-tabs .r-tabs-accordion-title {
+	display: block;
+  }
+}
+

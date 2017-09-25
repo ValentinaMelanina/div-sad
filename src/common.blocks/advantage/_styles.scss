@@ -121,7 +121,7 @@
 
 /* КНОПКА */
 // ==================================================
-.advantage-button  {
+.advantage-btn  {
   text-align: center;
   
   &__wrap {
@@ -145,15 +145,30 @@
  
 	&:before {
 	  background: url("../images/star-empty.svg") no-repeat left bottom / auto 30px;
-	  height: 30px;
-	  width: 30px;
-	  bottom: -15px;
-	  left: 60px;
+	  height: 40px;
+	  width: 40px;
+	  bottom: -21px;
+	  left: 125px;
+	  transform: rotate(100deg);
 	}
   }
 }
+.advantage-btn__container-first {
+  
+  &:before {
+	background: url("../images/star-empty.svg") no-repeat left bottom / auto 20px;
+	height: 30px;
+	width: 30px;
+	right: 35px;
+	top: -15px;
+	transform: rotate(45deg);
+	content: '';
+	position: absolute;
+	z-index: 2;
+  }
+}
 @media screen and (max-width: 48em) {
-  .advantage-button {
+  .advantage-btn {
 	display: none;
   }
 }

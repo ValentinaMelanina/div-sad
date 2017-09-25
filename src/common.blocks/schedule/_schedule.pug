@@ -1,0 +1,36 @@
+include _data
+
+mixin listAdvantage(item)
+	for item in listAdvantage
+		.schedule-list__container.col-xs-12.col-sm-4.col-lg-20
+			.schedule-list__item
+				.schedule-list__img
+					img(src=item.list_img)
+				.schedule-list__title
+					=item.list_title
+				.schedule-list__text
+					=item.list_text
+
+// Распорядок дня
+.schedule-day
+	.section-subtitle Распорядок
+
+
+// Расписание занятий
+.timetable
+	.section-subtitle Расписание занятий
+
+	//Навигация по расписанию
+	ul#timetable-navigation
+		li.timetable-navigation__item
+			a(href="#test1").timetable-navigation__link Кнопочки
+		li.timetable-navigation__item
+			a(href="#test2").timetable-navigation__link Лучики
+		li.timetable-navigation__item
+			a(href="#test3").timetable-navigation__link Звездочки
+
+	#test1 Test 1
+	#test2 Test 2
+	#test3 Test 3
+
+

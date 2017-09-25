@@ -12,6 +12,10 @@
 @import "typography";
 
 
+/* Кнопки */
+@import "../common.blocks/button/styles";
+
+
 /* ==========================================================================
    Компоненты (блоки)
    ========================================================================== */
@@ -33,8 +37,9 @@
 /* Блок с кружками и секциями */
 @import "../common.blocks/classes/styles";
 
-/* Кнопки */
-@import "../common.blocks/button/styles";
+/* Блок с кружками и секциями */
+@import "../common.blocks/schedule/styles";
+
 
 
 

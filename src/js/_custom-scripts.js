@@ -19,4 +19,15 @@ if (hamburgers.length > 0) {
 }
 
 
+// Навигация по расписанию занятий
+$(document).ready(function () {
+    var $tabs = $('#timetable-navigation');
+    $tabs.responsiveTabs({
+        rotate: false,
+        startCollapsed: 'accordion',
+        collapsible: 'accordion',
+        setHash: true
+    });
+});
+
 

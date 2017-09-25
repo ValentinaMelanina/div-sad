@@ -1,13 +1,13 @@
 /* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
 // ==================================================
 .groups {
-  padding: 90px 0;
   position: relative;
+  padding-bottom: 75px;
   
   &:after {
 	content: "";
 	position: absolute;
-	background: url(../images/wave-white.png) repeat-x left bottom / 500px auto;
+	background: url(../images/wave.png) repeat-x left bottom / 500px auto;
 	height: 45px;
 	width: 100%;
 	top: -70px;
@@ -23,7 +23,7 @@
 /* Основной стиль списка */
 // ==================================================
 .group-list {
-  margin: 0 6% 25px;
+  margin: 80px 6% 25px;
 }
 @media screen and (min-width: 48em) {
   .group-list {
@@ -97,7 +97,7 @@
 /* Подзаголовок */
 // ==================================================
 .group-list__subtitle {
-  font-size: 10px;
+  font-size: 12px;
   margin-bottom: 10px;
 }
 
@@ -105,4 +105,59 @@
 // ==================================================
 .group-list__text {
   margin: 25px 0;
+}
+
+/* КНОПКА */
+// ==================================================
+.group-btn  {
+  text-align: center;
+  
+  &__wrap {
+	display: inline-block;
+	position: relative;
+	
+	&:after,
+	&:before {
+	  content: '';
+	  position: absolute;
+	  z-index: 2;
+	}
+	
+	&:after {
+	  height: 45px;
+	  width: 45px;
+	  top: -18px;
+	  left: 35px;
+	  background: url("../images/star-empty.svg") no-repeat left bottom / auto 35px;
+	  transform: rotate(60deg);
+	}
+	
+	&:before {
+	  background: url("../images/star-empty.svg") no-repeat left bottom / auto 25px;
+	  height: 30px;
+	  width: 30px;
+	  bottom: -14px;
+	  right: 45px;
+	  transform: rotate(100deg);
+	}
+  }
+}
+.group-btn__container-first {
+  
+  &:before {
+	background: url("../images/star-empty.svg") no-repeat left bottom / auto 20px;
+	height: 30px;
+	width: 30px;
+	right: 5px;
+	bottom: -12px;
+	transform: rotate(45deg);
+	content: '';
+	position: absolute;
+	z-index: 2;
+  }
+}
+@media screen and (max-width: 27em) {
+  .group-btn {
+	display: none;
+  }
 }

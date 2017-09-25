@@ -13,17 +13,17 @@ block content
 	//	Группы
 	section.groups
 		.container
-			p.section-description
-				| В нашем детском саду есть группы подготовки к школе, в которых ребенок сможет своевременно
-				| познакомиться с первыми школьными предметами
 			include ../common.blocks/groups/_groups
 
 	//	Кружки и секции
 	section.classes
 		.container
-			h2.section-title.section-title_light
-				| Кружки и секции
-			include ../common.blocks/classes/_list_classes
+			include ../common.blocks/classes/_classes
+
+	//	Расписание и распорядок дня
+	section.schedule
+		.container
+			include ../common.blocks/schedule/_schedule
 
 
 

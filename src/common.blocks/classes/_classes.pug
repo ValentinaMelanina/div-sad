@@ -1,0 +1,44 @@
+include _data
+
+mixin listClasses(item)
+	for item in listClasses
+		.classes-list__container.col-xs-12.col-md-6
+			.classes-list__item
+				.classes-list__img
+					img(src=item.list_img).cover
+				.classes-list__content
+					.classes-list__title
+						=item.list_title
+					.classes-list__text
+						=item.list_text
+					.classes-info.row.start-xs
+						for item_2 in item.list_star
+							.classes-info__item
+								.classes-info__text
+									=item_2.list_text
+
+h2.section-title.section-title_light
+	| Кружки и секции
+
+// Навигация по блоку
+ul.classes-navigation
+	li.classes-navigation__item
+		a(href="#").classes-navigation__link Все
+	li.classes-navigation__item
+		a(href="#").classes-navigation__link Кнопочки
+	li.classes-navigation__item
+		a(href="#").classes-navigation__link Лучики
+	li.classes-navigation__item
+		a(href="#").classes-navigation__link Звездочки
+	li.classes-navigation__item
+		a(href="#").classes-navigation__link Подготовка к школе
+	li.classes-navigation__item
+		a(href="#").classes-navigation__link Курсы для школьников
+	li.classes-navigation__item
+		a(href="#").classes-navigation__link Кружки и секции
+
+
+// Кружки и секции
+.classes-list.row.center-xs
+	+listClasses(item)
+

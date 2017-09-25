@@ -14,8 +14,21 @@ mixin listGroups(item)
 					.group-list__text
 						=item.list_text
 
+
+p.section-description
+	| В нашем детском саду есть группы подготовки к школе, в которых ребенок сможет своевременно
+	| познакомиться с первыми школьными предметами
+
+// Узнать стоимость посещения
+.group-btn
+	.group-btn__wrap
+		.group-btn__container-first
+			button.button.button_theme-primary.button_size-l.waves-effect Узнать стоимость посещения
+
 // Группы
 .group-list.row.center-xs.start-md.between-lg
 	+listGroups(item)
+
+
 
 
