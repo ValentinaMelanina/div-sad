@@ -17,6 +17,7 @@
   }
 }
 
+
 /* СПИСОК С ПРЕИМУЩЕСТВАМИ */
 // ==================================================
 
@@ -24,7 +25,7 @@
 // ==================================================
 .advantage-list {
   color: white;
-  margin-bottom: 25px;
+  margin-bottom: 175px;
   padding: 0 4%;
 }
 @media screen and (min-width: 48em) {
@@ -35,6 +36,12 @@
 @media screen and (max-width: 64em) {
   .advantage-list {
 	padding: 0 2%;
+	margin-bottom: 125px;
+  }
+}
+@media screen and (max-width: 48em) {
+  .advantage-list {
+	margin-bottom: 0;
   }
 }
 
@@ -42,16 +49,23 @@
 // ==================================================
 .advantage-list__container {
   padding: 0 15px;
-  margin-bottom: 90px;
   flex-grow:1;
   display: flex;
 }
 @media screen and (max-width: 64em) {
   .advantage-list .advantage-list__container{
-	margin-bottom: 30px;
+	margin-bottom: 70px;
 	
 	&:last-child {
 	  margin-bottom: 90px;
+	}
+  }
+}
+@media screen and (max-width: 48em) {
+  .advantage-list .advantage-list__container {
+  
+	&:last-child {
+	  margin-bottom: 0;
 	}
   }
 }
@@ -102,4 +116,44 @@
 // ==================================================
 .advantage-list__text {
   margin: auto;
+}
+
+
+/* КНОПКА */
+// ==================================================
+.advantage-button  {
+  text-align: center;
+  
+  &__wrap {
+	display: inline-block;
+	position: relative;
+ 
+	&:after,
+	&:before {
+	  content: '';
+	  position: absolute;
+	  z-index: 2;
+	}
+ 
+	&:after {
+	  height: 90px;
+	  width: 90px;
+	  top: -85px;
+	  left: 30px;
+	  background: url("../images/owl-1.svg") no-repeat left bottom / auto 90px;
+	}
+ 
+	&:before {
+	  background: url("../images/star-empty.svg") no-repeat left bottom / auto 30px;
+	  height: 30px;
+	  width: 30px;
+	  bottom: -15px;
+	  left: 60px;
+	}
+  }
+}
+@media screen and (max-width: 48em) {
+  .advantage-button {
+	display: none;
+  }
 }

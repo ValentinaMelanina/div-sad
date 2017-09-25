@@ -2,8 +2,7 @@ mixin navLink(link, name)
 	li.main-menu__item
 		a.main-menu__link(
 		href = link
-		class = {active: name === current}
-		) #{name}
+		class = {active: name===current})=name
 
 
 // Меню
@@ -13,7 +12,7 @@ mixin navLink(link, name)
 			span.hamburger-box
 				span.hamburger-inner
 		ul.main-menu
-			+navLink ('/', 'О детском саде')
+			+navLink ('/index.html', 'О детском саде')
 			+navLink ('#', 'Группы')
 			+navLink ('#', 'Кружки и секции')
 			+navLink ('#', 'Расписание')
