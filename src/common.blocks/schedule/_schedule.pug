@@ -13,24 +13,236 @@ mixin listAdvantage(item)
 
 // Распорядок дня
 .schedule-day
-	.section-subtitle Распорядок
+	h3.schedule__section-subtitle Распорядок
+	.schedule-day__list
+		.schedule-day__item
+			.schedule-day__title 8:00
+			.schedule-day__subtitle Прием и осмотр детей, утренняя гимнастика
+		.schedule-day__item
+			.schedule-day__title 8:30
+			.schedule-day__subtitle Завтрак
+		.schedule-day__item
+			.schedule-day__title 9:00
+			.schedule-day__subtitle Занятия
+		.schedule-day__item
+			.schedule-day__title 10:10
+			.schedule-day__subtitle Второй завтрак
+		.schedule-day__item
+			.schedule-day__title 10:20
+			.schedule-day__subtitle Занятия
+		.schedule-day__item
+			.schedule-day__title 11:20
+			.schedule-day__subtitle Утренняя прогулка
+		.schedule-day__item
+			.schedule-day__title 12:30
+			.schedule-day__subtitle Обед
+		.schedule-day__item
+			.schedule-day__title 13:15
+			.schedule-day__subtitle Дневной сон
+		.schedule-day__item
+			.schedule-day__title 15:00
+			.schedule-day__subtitle Подъем, гимнастика, закаливание
+		.schedule-day__item
+			.schedule-day__title 15:10
+			.schedule-day__subtitle Полдник
+		.schedule-day__item
+			.schedule-day__title 15:30
+			.schedule-day__subtitle Занятия, игры, развлечения
+		.schedule-day__item
+			.schedule-day__title 17:30
+			.schedule-day__subtitle Ужин
+		.schedule-day__item
+			.schedule-day__title 17:40
+			.schedule-day__subtitle Вечерняя прогулка
+		.schedule-day__item
+			.schedule-day__title 19:00
+			.schedule-day__subtitle Уход домой
 
 
 // Расписание занятий
 .timetable
-	.section-subtitle Расписание занятий
 
+	// Заголовок
+	h3.schedule__section-subtitle Расписание занятий
 	//Навигация по расписанию
-	ul#timetable-navigation
-		li.timetable-navigation__item
-			a(href="#test1").timetable-navigation__link Кнопочки
-		li.timetable-navigation__item
-			a(href="#test2").timetable-navigation__link Лучики
-		li.timetable-navigation__item
-			a(href="#test3").timetable-navigation__link Звездочки
+	ul.timetable-tabs
+		li.timetable-tabs__item
+			a(href="#first-tab").timetable-tabs__link Кнопочки
+				span.timetable-tabs__text группа
+		li.timetable-tabs__item
+			a(href="#second-tab").timetable-tabs__link Лучики
+				span.timetable-tabs__text группа
+		li.timetable-tabs__item
+			a(href="#third-tab").timetable-tabs__link Звездочки
+				span.timetable-tabs__text группа
+		span.menu__lines
+	// Расписание
+	.timetable-content
+		#first-tab
+			.timetable-content__list
+				.timetable-content__item
+					.timetable-content__title Понедельник
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Чтение художественной литературы современных классиков
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Английский язык
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
 
-	#test1 Test 1
-	#test2 Test 2
-	#test3 Test 3
+				.timetable-content__item
+					.timetable-content__title Вторник
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Чтение художественной литературы современных классиков
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Английский язык
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+
+				.timetable-content__item
+					.timetable-content__title Среда
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Чтение художественной литературы современных классиков
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Английский язык
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+
+				.timetable-content__item
+					.timetable-content__title Четверг
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Чтение художественной литературы современных классиков
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Английский язык
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+
+				.timetable-content__item
+					.timetable-content__title Пятница
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Чтение художественной литературы современных классиков
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Английский язык
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+
+		#second-tab
+			.timetable-content__list
+				.timetable-content__item
+					.timetable-content__title Понедельник
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+				.timetable-content__item
+					.timetable-content__title Вторник
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+				.timetable-content__item
+					.timetable-content__title Среда
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+				.timetable-content__item
+					.timetable-content__title Четверг
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+				.timetable-content__item
+					.timetable-content__title Пятница
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+
+		#third-tab
+			.timetable-content__list
+				.timetable-content__item
+					.timetable-content__title Понедельник
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+				.timetable-content__item
+					.timetable-content__title Вторник
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+				.timetable-content__item
+					.timetable-content__title Среда
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+				.timetable-content__item
+					.timetable-content__title Четверг
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+				.timetable-content__item
+					.timetable-content__title Пятница
+					.timetable-content__text
+						dl
+							dt.timetable-content__time 9:00-9:20
+								dd.timetable-content__lesson Познание
+
+
+
+
 
 

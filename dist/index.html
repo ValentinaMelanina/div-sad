@@ -363,27 +363,352 @@
           <div class="container">
             <!-- Распорядок дня-->
             <div class="schedule-day">
-              <div class="section-subtitle">Распорядок</div>
+              <h3 class="schedule__section-subtitle">Распорядок</h3>
+              <div class="schedule-day__list">
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">8:00</div>
+                  <div class="schedule-day__subtitle">Прием и осмотр детей, утренняя гимнастика</div>
+                </div>
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">8:30</div>
+                  <div class="schedule-day__subtitle">Завтрак</div>
+                </div>
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">9:00</div>
+                  <div class="schedule-day__subtitle">Занятия</div>
+                </div>
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">10:10</div>
+                  <div class="schedule-day__subtitle">Второй завтрак</div>
+                </div>
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">10:20</div>
+                  <div class="schedule-day__subtitle">Занятия</div>
+                </div>
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">11:20</div>
+                  <div class="schedule-day__subtitle">Утренняя прогулка</div>
+                </div>
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">12:30</div>
+                  <div class="schedule-day__subtitle">Обед</div>
+                </div>
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">13:15</div>
+                  <div class="schedule-day__subtitle">Дневной сон</div>
+                </div>
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">15:00</div>
+                  <div class="schedule-day__subtitle">Подъем, гимнастика, закаливание</div>
+                </div>
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">15:10</div>
+                  <div class="schedule-day__subtitle">Полдник</div>
+                </div>
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">15:30</div>
+                  <div class="schedule-day__subtitle">Занятия, игры, развлечения</div>
+                </div>
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">17:30</div>
+                  <div class="schedule-day__subtitle">Ужин</div>
+                </div>
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">17:40</div>
+                  <div class="schedule-day__subtitle">Вечерняя прогулка</div>
+                </div>
+                <div class="schedule-day__item">
+                  <div class="schedule-day__title">19:00</div>
+                  <div class="schedule-day__subtitle">Уход домой</div>
+                </div>
+              </div>
             </div>
             <!-- Расписание занятий-->
             <div class="timetable">
-              <div class="section-subtitle">Расписание занятий</div>
+              <!-- Заголовок-->
+              <h3 class="schedule__section-subtitle">Расписание занятий</h3>
               <!--Навигация по расписанию-->
-              <ul id="timetable-navigation">
-                <li class="timetable-navigation__item"><a class="timetable-navigation__link" href="#test1">Кнопочки</a></li>
-                <li class="timetable-navigation__item"><a class="timetable-navigation__link" href="#test2">Лучики</a></li>
-                <li class="timetable-navigation__item"><a class="timetable-navigation__link" href="#test3">Звездочки</a></li>
+              <ul class="timetable-tabs">
+                <li class="timetable-tabs__item"><a class="timetable-tabs__link" href="#first-tab">Кнопочки<span class="timetable-tabs__text">группа</span></a></li>
+                <li class="timetable-tabs__item"><a class="timetable-tabs__link" href="#second-tab">Лучики<span class="timetable-tabs__text">группа</span></a></li>
+                <li class="timetable-tabs__item"><a class="timetable-tabs__link" href="#third-tab">Звездочки<span class="timetable-tabs__text">группа</span></a></li><span class="menu__lines"></span>
               </ul>
-              <div id="test1">Test 1</div>
-              <div id="test2">Test 2</div>
-              <div id="test3">Test 3</div>
+              <!-- Расписание-->
+              <div class="timetable-content">
+                <div id="first-tab">
+                  <div class="timetable-content__list">
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Понедельник</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Чтение художественной литературы современных классиков</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Английский язык</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Вторник</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Чтение художественной литературы современных классиков</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Английский язык</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Среда</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Чтение художественной литературы современных классиков</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Английский язык</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Четверг</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Чтение художественной литературы современных классиков</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Английский язык</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Пятница</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Чтение художественной литературы современных классиков</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Английский язык</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="second-tab">
+                  <div class="timetable-content__list">
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Понедельник</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Вторник</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Среда</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Четверг</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Пятница</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="third-tab">
+                  <div class="timetable-content__list">
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Понедельник</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Вторник</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Среда</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Четверг</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                    <div class="timetable-content__item">
+                      <div class="timetable-content__title">Пятница</div>
+                      <div class="timetable-content__text">
+                        <dl>
+                          <dt class="timetable-content__time">9:00-9:20
+                            <dd class="timetable-content__lesson">Познание</dd>
+                          </dt>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
       <!-- Footer-->
       <footer class="footer">footer jhfjgfkg</footer>
-      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
       <script src="js/scripts.min.js"></script>
     </div>
   </body>

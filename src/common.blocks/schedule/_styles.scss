@@ -1,7 +1,7 @@
 /* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
 // ==================================================
 .schedule {
-  background: #f67283;
+  background: #fad916;
   position: relative;
   padding-bottom: 70px;
   
@@ -15,303 +15,420 @@
 	left: 0;
 	z-index: 1;
   }
-}
-
-
-/* СПИСОК С ПРЕИМУЩЕСТВАМИ */
-// ==================================================
-
-/* Основной стиль списка */
-// ==================================================
-.schedule-list {
-  color: white;
-  margin-bottom: 175px;
-  padding: 0 4%;
-}
-@media screen and (min-width: 48em) {
-  .schedule-list {
-	text-align: left;
-  }
-}
-@media screen and (max-width: 64em) {
-  .schedule-list {
-	padding: 0 2%;
-	margin-bottom: 125px;
-  }
-}
-@media screen and (max-width: 48em) {
-  .schedule-list {
-	margin-bottom: 0;
-  }
-}
-
-/* Контейнер */
-// ==================================================
-.schedule-list__container {
-  padding: 0 15px;
-  flex-grow:1;
-  display: flex;
-}
-@media screen and (max-width: 64em) {
-  .schedule-list .schedule-list__container{
-	margin-bottom: 70px;
-	
-	&:last-child {
-	  margin-bottom: 90px;
-	}
-  }
-}
-@media screen and (max-width: 48em) {
-  .schedule-list .schedule-list__container {
   
-	&:last-child {
-	  margin-bottom: 0;
-	}
-  }
-}
-
-
-/* Элемент списка */
-// ==================================================
-.schedule-list__item {
-  flex-grow:1;
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  align-items: flex-start;
-}
-@media screen and (max-width: 64em) {
-  .schedule-list__item {
-	align-items: center;
-  }
-}
-
-/* Картинка */
-// ==================================================
-.schedule-list__img {
-  height: 85px;
-  margin-bottom: 35px;
-  overflow: hidden;
-  
-  & img {
-	max-height: 100%;
-	max-width: 100%;
-  }
-}
-@media screen and (max-width: 48em) {
-  .schedule-list__img {
-	justify-content: center;
-  }
-}
-
-/* Заголовок */
-// ==================================================
-.schedule-list__title {
-  margin: 0 0 30px;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-/* Текст */
-// ==================================================
-.schedule-list__text {
-  margin: auto;
-}
-
-
-/* КНОПКА */
-// ==================================================
-.schedule-btn  {
-  text-align: center;
-  
-  &__wrap {
-	display: inline-block;
+  & .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: flex-start;
 	position: relative;
- 
+	padding-bottom: 0;
+	
 	&:after,
 	&:before {
-	  content: '';
+	  content: "";
 	  position: absolute;
-	  z-index: 2;
+	  display: block;
+	  z-index: 100;
 	}
- 
 	&:after {
-	  height: 90px;
-	  width: 90px;
-	  top: -85px;
-	  left: 30px;
-	  background: url("../images/owl-1.svg") no-repeat left bottom / auto 90px;
+	  background: url("../images/owl-11.svg") no-repeat top center / 100%;
+	  bottom: -108px;
+	  left: 0;
+	  width: 102px;
+	  height: 138px;
+	}
+	&:before {
+	  background: url("../images/owl-3.svg") no-repeat top center / 100%;
+	  top: -75px;
+	  right: 0;
+	  width: 102px;
+	  height: 122px;
+	}
+	
+  }
+}
+
+// Заголовок h3
+.schedule__section-subtitle {
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 64em) {
+  .schedule {
+	
+	& .container {
+	  flex-direction: column;
+	}
+  }
+}
+
+
+/* РАСПОРЯДОК ДНЯ */
+// ==================================================
+.schedule-day {
+  margin: 0 30px 30px 0;
+  max-width: 215px;
+  
+  & .schedule__section-subtitle {
+	height: 66px;
+	padding-top: 22px;
+  }
+  
+  & .schedule-day__list {
+	font-size: 14px;
+	
+	& .schedule-day__item {
+	  display: flex;
+	  margin-bottom: 5px;
+	  
+	  & .schedule-day__title {
+		margin-right: 20px;
+		font-weight: bold;
+	  }
+	}
+  }
+}
+@media only screen and (max-width: 64em) {
+  .schedule-day {
+	max-width: 100%;
+	text-align: center;
+	margin: 0 0 60px;
+	
+	& .schedule-day__list {
+	  display: inline-block;
+	}
+  }
+ 
+}
+
+
+/* РАСПИСАНИЕ ЗАНЯТИЙ */
+// ==================================================
+.timetable {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  font-size: 14px;
+}
+
+/* Табы */
+.timetable {
+  width: 100%;
+  flex: 1;
+  
+  /* Заголовок */
+  & .schedule__section-subtitle {
+	 display: inline-block;
+   }
+  
+  /* Блок с вкладками */
+  & .r-tabs-nav {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	border: 2px solid #70bfe1;
+	border-radius: 100px;
+ 
+	/* Вкладка */
+	& .r-tabs-tab {
+	  position: relative;
+	  display: inline-block;
+	  margin: 0;
+	  width: 129px;
+	  list-style: none;
+	  z-index: 5;
 	}
  
-	&:before {
-	  background: url("../images/star-empty.svg") no-repeat left bottom / auto 30px;
-	  height: 40px;
-	  width: 40px;
-	  bottom: -21px;
-	  left: 125px;
-	  transform: rotate(100deg);
+	/* Вкладка - Disabled */
+	& .r-tabs-state-disabled {
+	  opacity: 0.5;
+	}
+ 
+	/* Сссылка */
+	& .r-tabs-anchor {
+	  display: block;
+	  padding: 15px 30px;
+	  text-decoration: none;
+	  font-size: 14px;
+	  font-weight: bold;
+	  text-align: center;
+	  transition: color 0.6s ease;
+	}
+ 
+	/* Активная ссылка */
+	& .r-tabs-state-active .r-tabs-anchor {
+	  color: white;
+	  text-shadow: none;
+	  transition: color 0.6s ease;
+	}
+ 
+	/* Стиль слайд-кнопки для вкладки */
+	& .menu__lines {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 129px;
+	  height: 100%;
+	  background-color: #70bfe1;
+	  border-radius: 50px;
+	  pointer-events: none;
+	  	-webkit-transition: -webkit-transform 0.5s 0.2s;
+	  transition: transform 0.5s 0.2s;
+		-webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1);
+		-webkit-transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
+	  transition-timing-function: cubic-bezier(1, 0.01, 0, 1.22);
+	  z-index: 1;
+	}
+ 
+	/* анимация вначале перехода по вкладке */
+	& .menu__lines::before {
+	  	-webkit-transform: scale3d(1, 0, 1);
+	  transform: scale3d(1, 0, 1);
+	 	 -webkit-transition: -webkit-transform 0.2s ease;
+	  transition: transform 0.2s ease;
+	}
+ 
+	/* анимация в конце перехода по вкладке */
+	& .menu__lines::after {
+	  	-webkit-transform: scale3d(1, 1, 1);
+	  transform: scale3d(1, 1, 1);
+	  	-webkit-transition: -webkit-transform 0.2s ease 0.7s;
+	  transition: transform 0.2s ease 0.7s;
+	}
+ 
+	/* Направление для смены слайд-кнопки */
+	& .r-tabs-tab:active:not(.r-tabs-state-active) ~ .menu__lines::before,
+	& .r-tabs-tab:active:not(.r-tabs-state-active) ~ .menu__lines::after {
+	 	 -webkit-transition: -webkit-transform 0s;
+	  transition: transform 0s;
+	}
+	& .r-tabs-tab:active:not(.r-tabs-state-active) ~ .menu__lines::before {
+	  	-webkit-transform: scale3d(1, 1, 1);
+	  transform: scale3d(1, 1, 1);
+	}
+	& .r-tabs-tab:active:not(.r-tabs-state-active) ~ .menu__lines::after {
+	  	-webkit-transform: scale3d(1, 0, 1);
+	  transform: scale3d(1, 0, 1);
+	}
+	& .r-tabs-tab:nth-child(1).r-tabs-state-active ~ .menu__lines {
+	  	-webkit-transform: translate3d(0, 0, 0);
+	  transform: translate3d(0, 0, 0);
+	}
+	& .r-tabs-tab:nth-child(2).r-tabs-state-active ~ .menu__lines {
+	 	 -webkit-transform: translate3d(100%, 0, 0);
+	  transform: translate3d(104%, 0, 0);
+	}
+	& .r-tabs-tab:nth-child(3).r-tabs-state-active ~ .menu__lines {
+	  	-webkit-transform: translate3d(200%, 0, 0);
+	  transform: translate3d(208%, 0, 0);
+	}
+  }
+  
+  &:after {
+	content: '';
+	width: 100%;
+	order: 0;
+  }
+}
+
+/* Содержимое вкладок */
+.timetable-content {
+  margin-top: 30px;
+  width: 100%;
+  order: 1;
+  
+  /* Панель содержимого вкладки */
+  & .r-tabs-panel {
+	padding: 15px;
+	display: none;
+	opacity: 0;
+	transition: opacity .7s ease;
+  }
+  
+  /* Панель содержимого активной вкладки */
+  & .r-tabs-panel.r-tabs-state-active {
+	display: block;
+	opacity: 1;
+	transition: opacity .7s ease;
+  }
+  
+  /* Список элементов внутри контента */
+  & .timetable-content__list {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: flex-start;
+  }
+  
+  /* Элемент списка внутри контента */
+  & .timetable-content__item {
+	flex: 1;
+	margin-right: 20px;
+	
+	/* отменяем отступ для послднего элемента */
+	&:last-child {
+	  margin-right: 0;
+	}
+ 
+	/* Текст */
+	& .timetable-content__text {
+	  margin-bottom: 30px;
+	}
+  
+	/* Заголовок */
+	& .timetable-content__title {
+	  padding: 15px 25px;
+	  text-align: center;
+	  background: white;
+	  border-radius: 50px;
+	}
+	
+	/* Время */
+	& .timetable-content__time {
+	  font-weight: bold;
+	  margin-bottom: 10px;
+	}
+ 
+	/* Предмет */
+	& .timetable-content__lesson {
+	  -webkit-margin-start: 0;
+	  margin: 0;
+	  line-height: 20px;
 	}
   }
 }
-.schedule-btn__container-first {
-  
-  &:before {
-	background: url("../images/star-empty.svg") no-repeat left bottom / auto 20px;
-	height: 30px;
-	width: 30px;
-	right: 35px;
-	top: -15px;
-	transform: rotate(45deg);
-	content: '';
-	position: absolute;
-	z-index: 2;
-  }
-}
-@media screen and (max-width: 48em) {
-  .schedule-btn {
-	display: none;
-  }
-}
 
 
 
-/* Расписание занятий */
-// ==================================================
-/* Табы */
-.r-tabs {
-  position: relative;
-  
-  background-color: #00c5ad;
-  
-  border-top: 1px solid #00c5ad;
-  border-right: 1px solid #00c5ad;
-  border-left: 1px solid #00c5ad;
-  border-bottom: 4px solid #00c5ad;
-  border-radius: 4px;
-  
-}
-
-/* Элемент */
-.r-tabs .r-tabs-nav .r-tabs-tab {
-  position: relative;
-  background-color: #00c5ad;
-}
-
-/* Сссылка */
-.r-tabs .r-tabs-nav .r-tabs-anchor {
-  display: inline-block;
-  padding: 10px 12px;
-  
-  text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-}
-
-/* вкладка - Disabled */
-.r-tabs .r-tabs-nav .r-tabs-state-disabled {
-  opacity: 0.5;
-}
-
-/* Активная ссылка */
-.r-tabs .r-tabs-nav .r-tabs-state-active .r-tabs-anchor {
-  color: #00c5ad;
-  text-shadow: none;
-  
-  background-color: white;
-  
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-}
-
-/* Панель вкладок */
-.r-tabs .r-tabs-panel {
-  background-color: white;
-  
-  border-bottom: 4px solid white;
-  
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  
-}
-
-/* Ссылки в аккордионе */
-.r-tabs .r-tabs-accordion-title .r-tabs-anchor {
+/* Дополнительный текст во вкладке */
+.timetable-tabs__text {
+  font-size: 10px;
   display: block;
-  padding: 10px;
-  
-  background-color: #00c5ad;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.4);
-  font-size: 14px;
-  
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  line-height: 10px;
 }
 
-/* Активная ссылка в аккордионе */
-.r-tabs .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
-  background-color: #fff;
-  color: #00c5ad;
-  text-shadow: none;
-}
 
-/* Disabled кнопка в аккордионе */
-.r-tabs .r-tabs-accordion-title.r-tabs-state-disabled {
-  opacity: 0.5;
-}
-
-/* Инфо бар */
-.info {
-  display:inline-block;
-  margin-top: 10px;
-  margin-right: 10px;
-  padding: 10px 20px;
-  width: 300px;
-  line-height: 100%;
-  
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 14px;
-  color: #00c5ad;
-  border: 2px solid #00ab94;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background-color: #fff;
-  
-  cursor: pointer;
-}
-
-.r-tabs .r-tabs-nav {
-  margin: 0;
-  padding: 0;
-}
-.r-tabs .r-tabs-tab {
-  display: inline-block;
-  margin: 0;
-  list-style: none;
-}
-.r-tabs .r-tabs-panel {
-  padding: 15px;
-  display: none;
-}
-.r-tabs .r-tabs-accordion-title {
-  display: none;
-}
-.r-tabs .r-tabs-panel.r-tabs-state-active {
-  display: block;
-}
 /* Аккордион */
-@media only screen and (max-width: 768px) {
-  .r-tabs .r-tabs-nav {
+
+.timetable {
+  
+  /* Вкладка */
+  & .r-tabs-accordion-title {
 	display: none;
   }
   
-  .r-tabs .r-tabs-accordion-title {
+  /* Ссылки в аккордионе */
+  & .r-tabs-accordion-title .r-tabs-anchor {
 	display: block;
+	padding: 10px;
+	background-color: #70bfe1;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 14px;
+	border-top-right-radius: 4px;
+	border-top-left-radius: 4px;
   }
+  
+  /* Активная ссылка в аккордионе */
+  & .r-tabs-accordion-title.r-tabs-state-active .r-tabs-anchor {
+	color: white;
+	text-shadow: none;
+	background-color: #70bfe1;
+  }
+  
+  /* Disabled кнопка в аккордионе */
+  & .r-tabs-accordion-title.r-tabs-state-disabled {
+	opacity: 0.5;
+  }
+  
+  
 }
+@media only screen and (max-width: 64em) {
+  .timetable {
+  
+	/* Блок с вкладками */
+	& .r-tabs-nav {
+	  display: none;
+	}
+ 
+	/* Содержимое вкладок */
+	& .r-tabs-panel {
+	  margin-bottom: 5px;
+	  
+	  & .timetable-content__list {
+		flex-direction: column;
+	  }
+	  
+	  & .timetable-content__title {
+		width: 200px;
+		margin: 0 auto;
+	  }
+	  
+	  & .timetable-content__text {
+		text-align: center;
+	  }
+	  
+	  &.r-tabs-state-active {
+		border: 2px solid #70bfe1;
+		border-radius: 0 0 4px 4px;
+	  }
+	}
+ 
+	/* Вкладка */
+	& .r-tabs-accordion-title {
+	  display: block;
+	  position: relative;
+	  
+	  /* Все вкладки, кроме активной */
+	  &:not(.r-tabs-state-active) {
+		margin-bottom: 5px;
+	 
+		/* Все ссылки внутри вкладки, кроме активной вкладки */
+		& .r-tabs-anchor {
+		  border-radius: 4px;
+		}
+	  }
+	  
+	  /* Иконка для вкладки */
+	  &:after {
+		position: absolute;
+		top: 14px;
+		right: 25px;
+		content: "\f078"; // Если вкладка не активна
+		font-family: FontAwesome;
+		color: white;
+		font-size: 14px;
+		display: block;
+		width: 5px;
+		height: 5px;
+		cursor: pointer;
+		opacity: .3;
+	  }
+	  &.r-tabs-state-active:after {
+		content: "\f077"; // Если вкладка активна
+	  }
+	}
+ 
+	/* Заголовок */
+	& .schedule__section-subtitle {
+	  display: block;
+	  text-align: center;
+	  width: 100%;
+	}
+	
+	/* Дополнительный эмент для слайд-кнопки */
+	& .menu__lines {
+	  display: none;
+	}
+  }
+  
+}
+
+
+
+
 

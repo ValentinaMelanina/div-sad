@@ -1,4 +1,3 @@
-
 ;(function ( $, window, undefined ) {
 
     /** Default settings */
