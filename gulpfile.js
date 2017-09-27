@@ -33,7 +33,7 @@ var path = {
             'src/js/_custom-scripts.js',
         ],
         style: 'src/scss/styles.scss',
-        img: 'src/images/**/**/*.*',
+        img: 'src/images/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
@@ -100,12 +100,11 @@ gulp.task('style:build', function () {
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()],
-            interlaced: true
-        }))
+        .pipe(imagemin([
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({plugins: [{removeViewBox: false}]})
+        ]))
         .pipe(gulp.dest(path.build.img))
         .pipe(reload({stream: true}));
 });
