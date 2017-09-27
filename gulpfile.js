@@ -33,7 +33,7 @@ var path = {
             'src/js/_custom-scripts.js',
         ],
         style: 'src/scss/styles.scss',
-        img: 'src/images/*.*',
+        img: 'src/images/**/*',
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
