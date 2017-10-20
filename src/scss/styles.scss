@@ -15,6 +15,10 @@
 /* Кнопки */
 @import "../common.blocks/button/styles";
 
+/* Поля формы */
+@import "../common.blocks/input/styles";
+
+
 
 /* ==========================================================================
    Компоненты (блоки)
@@ -39,6 +43,9 @@
 
 /* Блок с кружками и секциями */
 @import "../common.blocks/schedule/styles";
+
+/* Блок с событиями */
+@import "../common.blocks/event/styles";
 
 
 

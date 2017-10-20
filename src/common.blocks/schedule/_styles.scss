@@ -5,15 +5,23 @@
   position: relative;
   padding-bottom: 70px;
   
-  &:after {
+  &:after,
+  &:before {
 	content: "";
 	position: absolute;
-	background: url(../images/flowers-border.svg) repeat-x left bottom / 500px auto;
-	height: 202px;
+	background: url(../images/wave-2.png) repeat-x left bottom / 380px auto;
+	height: 45px;
 	width: 100%;
-	top: -202px;
 	left: 0;
 	z-index: 1;
+  }
+  &:after {
+	top: -45px;
+  }
+  
+  &:before {
+	bottom: -45px;
+	transform: rotate(180deg);
   }
   
   & .container {
@@ -150,7 +158,7 @@
 	/* Сссылка */
 	& .r-tabs-anchor {
 	  display: block;
-	  padding: 15px 30px;
+	  padding: 10px 30px;
 	  text-decoration: none;
 	  font-size: 14px;
 	  font-weight: bold;
@@ -300,8 +308,6 @@
 	}
   }
 }
-
-
 
 /* Дополнительный текст во вкладке */
 .timetable-tabs__text {

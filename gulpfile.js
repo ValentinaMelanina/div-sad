@@ -105,8 +105,7 @@ gulp.task('image:build', function () {
             imagemin.optipng({optimizationLevel: 5}),
             imagemin.svgo({plugins: [{removeViewBox: false}]})
         ]))
-        .pipe(gulp.dest(path.build.img))
-        .pipe(reload({stream: true}));
+        .pipe(gulp.dest(path.build.img));
 });
 
 gulp.task('fonts:build', function() {

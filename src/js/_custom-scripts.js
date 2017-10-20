@@ -27,4 +27,25 @@ $tabs.responsiveTabs({
     active:  0
 });
 
+// // Счетчик
+// $('.event__counter').countdown('2020/10/10', function(event) {
+//
+//     function declination(titles, number) {
+//         var cases = [2, 0, 1, 1, 1, 2];
+//         return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
+//     }
+//
+//     var days = event.offset.days,
+//         hours = event.offset.hours,
+//         minutes = event.offset.minutes;
+//
+//     var dd = declination(['День','Дня','Дней'], days),
+//         hh = declination(['Час','Часа','Часов'], hours),
+//         mm = declination(['Минута','Минуты','Минут'], minutes);
+//
+//     var $this = $(this).html(event.strftime(''
+//         + '<span>' + days + dd +'</span>'
+//         + '<span>' + hours + hh +'</span>'
+//         + '<span>' + minutes + mm +'</span>'));
+// });
 
