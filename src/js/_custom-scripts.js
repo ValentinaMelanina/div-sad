@@ -64,24 +64,21 @@ $(document).ready(function(){
     });
 
 
-    // Global variables
+    // Ресайз картинок
     var images = $('.img-cover'),
         parent = images.parent(),
         homeImageWidth = images.attr('data-width'),
         homeImageHeight = images.attr('data-height');
 
-
-// Set-up
     $(window).resize(function() {
         calcReplacementHome();
         toggleResponsiveItemsHome();
     });
 
-
-function calcReplacementHome() {
-    if (! Modernizr.csscalc) {
+    function calcReplacementHome() {
+        if (! Modernizr.csscalc) {
+        }
     }
-}
 
     function toggleResponsiveItemsHome() {
 
@@ -91,8 +88,8 @@ function calcReplacementHome() {
     }
 
     function resizeHomeImages() {
-        var i = homeImageWidth;
-        var j = homeImageHeight;
+        var i = homeImageWidth,
+            j = homeImageHeight;
         if (parent.height() > images.height() || parent.width() < images.width()) {
             images.height(parent.height());
             var k = images.height() / j * 100;
