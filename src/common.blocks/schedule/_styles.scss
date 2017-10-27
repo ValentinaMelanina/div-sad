@@ -9,7 +9,7 @@
   &:before {
 	content: "";
 	position: absolute;
-	background: url(../images/wave-2.png) repeat-x left bottom / 380px auto;
+	background: url(../images/wave-yellow.png) repeat-x left bottom / 380px auto;
 	height: 45px;
 	width: 100%;
 	left: 0;
@@ -20,7 +20,7 @@
   }
   
   &:before {
-	bottom: -45px;
+	bottom: -44px;
 	transform: rotate(180deg);
   }
   
@@ -67,6 +67,20 @@
 	
 	& .container {
 	  flex-direction: column;
+	  padding: 5% 20px;
+	  
+	  &:after,
+	  &:before {
+		background-size: 60%;
+	  }
+	  
+	  &:after {
+		bottom: -165px;
+	  }
+	  
+	  &:before {
+		top: -55px;
+	  }
 	}
   }
 }
@@ -158,12 +172,13 @@
 	/* Сссылка */
 	& .r-tabs-anchor {
 	  display: block;
-	  padding: 10px 30px;
+	  padding: 12px 30px;
 	  text-decoration: none;
 	  font-size: 14px;
 	  font-weight: bold;
 	  text-align: center;
 	  transition: color 0.6s ease;
+	  line-height: 20px;
 	}
  
 	/* Активная ссылка */
@@ -269,6 +284,7 @@
 	justify-content: space-between;
 	align-items: stretch;
 	align-content: flex-start;
+	flex-wrap: wrap;
   }
   
   /* Элемент списка внутри контента */
@@ -284,6 +300,7 @@
 	/* Текст */
 	& .timetable-content__text {
 	  margin-bottom: 30px;
+	  text-align: center;
 	}
   
 	/* Заголовок */
@@ -292,12 +309,14 @@
 	  text-align: center;
 	  background: white;
 	  border-radius: 50px;
+	  margin-bottom: 25px;
 	}
 	
 	/* Время */
 	& .timetable-content__time {
 	  font-weight: bold;
-	  margin-bottom: 10px;
+	  margin-bottom: 5px;
+	  font-size: 16px;
 	}
  
 	/* Предмет */
@@ -365,9 +384,9 @@
 	& .r-tabs-panel {
 	  margin-bottom: 5px;
 	  
-	  & .timetable-content__list {
-		flex-direction: column;
-	  }
+	  //& .timetable-content__list {
+		//flex-direction: column;
+	  //}
 	  
 	  & .timetable-content__title {
 		width: 200px;

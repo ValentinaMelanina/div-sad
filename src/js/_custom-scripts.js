@@ -10,7 +10,7 @@ $(document).ready(function(){
         var forEach = function (t, o, r) {
             if ("[object Object]" === Object.prototype.toString.call(t))for (var c in t)Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t)
         };
-        var hamburgers = document.querySelectorAll(".hamburger");
+        var hamburgers = document.querySelectorAll(".hamburger-main-menu");
         if (hamburgers.length > 0) {
             forEach(hamburgers, function (hamburger) {
                 hamburger.addEventListener("click", function () {
@@ -29,7 +29,7 @@ $(document).ready(function(){
             active: 0
         });
 
-    //	Инициализация счетчика
+    //	Инициализация счетчика обратного отсчета
     $('.event__counter').countdown($('.event__counter').attr('data-start-date'), function(event) {
         function declination(titles, number) {
             var cases = [2, 0, 1, 1, 1, 2];
@@ -44,13 +44,79 @@ $(document).ready(function(){
             hh = declination(['Час','Часа','Часов'], hours),
             mm = declination(['Минута','Минуты','Минут'], minutes);
         var $this = $(this).html(event.strftime(''
-            + '<span>' + weeks + ww + '</span> '
-            + '<span>' + days + dd +'</span> '
-            + '<span>' + hours + hh +'</span> '
-            + '<span>' + minutes + mm +'</span> '
+             + '<div class="event__counter-wrap">'
+                + '<div class="event__counter-number">' + weeks + '</div> '
+                + '<div class="event__counter-text">' + ww + '</div> '
+            +'</div> '
+             + '<div class="event__counter-wrap">'
+                + '<div class="event__counter-number">' + days + '</div> '
+                + '<div class="event__counter-text">' + dd + '</div> '
+            +'</div> '
+             + '<div class="event__counter-wrap">'
+                + '<div class="event__counter-number">' + hours + '</div> '
+                + '<div class="event__counter-text">' + hh + '</div> '
+            +'</div> '
+             + '<div class="event__counter-wrap">'
+                + '<div class="event__counter-number">' + minutes + '</div> '
+                + '<div class="event__counter-text">' + mm + '</div> '
+            +'</div> '
         ));
     });
 
+
+    // Global variables
+    var images = $('.img-cover'),
+        parent = images.parent(),
+        homeImageWidth = images.attr('data-width'),
+        homeImageHeight = images.attr('data-height');
+
+
+// Set-up
+    $(window).resize(function() {
+        calcReplacementHome();
+        toggleResponsiveItemsHome();
+    });
+
+
+function calcReplacementHome() {
+    if (! Modernizr.csscalc) {
+    }
+}
+
+    function toggleResponsiveItemsHome() {
+
+        if (images.attr('src') != '') {
+            resizeHomeImages();
+        }
+    }
+
+    function resizeHomeImages() {
+        var i = homeImageWidth;
+        var j = homeImageHeight;
+        if (parent.height() > images.height() || parent.width() < images.width()) {
+            images.height(parent.height());
+            var k = images.height() / j * 100;
+            k = i / 100 * k;
+            images.width(k);
+        }
+        if (parent.width() > images.width() || parent.height() < images.height()) {
+            images.width(parent.width());
+            k = images.width() / i * 100;
+            k = j / 100 * k;
+            images.height(k);
+        }
+
+        var l = parent.width() - images.width();
+        l = Math.round(l / 2);
+        k = parent.height() - images.height();
+        k = Math.round(k / 2);
+        images.css({top: k + 'px', left: l + 'px'});
+    }
+
+    toggleResponsiveItemsHome();
+
 });
+
+
 
 

@@ -189,6 +189,10 @@ $hamburger-hover-filter    : opacity(50%) !default;
   }
 }
 
+.hamburger-text {
+  vertical-align: top;
+}
+
 // Hamburger types – Emphatic
 // ==================================================
 .hamburger--emphatic {
@@ -246,6 +250,7 @@ $hamburger-hover-filter    : opacity(50%) !default;
 	display: inline-block;
 	left: 0;
 	z-index: 200;
+	height: 54px;
   }
   .hamburger.is-active {
 
