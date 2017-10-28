@@ -1,0 +1,56 @@
+/* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
+// ==================================================
+
+
+/* Заголовок */
+// ==================================================
+.section-title_children-menu {
+  color: #333;
+  font-weight: bold;
+  font-size: 65px;
+}
+
+/* Основной текст раздела */
+// ==================================================
+.section-description_children-menu {
+  max-width: 985px;
+  font-size: 31px;
+  line-height: 47px;
+  position: relative;
+  margin: 160px auto;
+  
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    height: 63px;
+    width: 100%;
+    right: 0;
+    z-index: 1;
+  }
+  &:before {
+    background: url(../images/wave-dashed.png) no-repeat top / 100%;
+    top: -107px;
+  }
+  
+  &:after {
+    background: url(../images/wave-dashed_2.png) no-repeat top / 100%;
+    bottom: -115px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-description_children-menu {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 140px auto;
+  
+    &:before {
+      top: -86px;
+    }
+  
+    &:after {
+      bottom: -104px;
+    }
+  }
+}

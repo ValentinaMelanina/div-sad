@@ -92,21 +92,17 @@ $(document).ready(function(){
             j = homeImageHeight;
         if (parent.height() > images.height() || parent.width() < images.width()) {
             images.height(parent.height());
-            var k = images.height() / j * 100;
-            k = i / 100 * k;
+            var k = (images.height() * i ) / j;
             images.width(k);
         }
         if (parent.width() > images.width() || parent.height() < images.height()) {
             images.width(parent.width());
-            k = images.width() / i * 100;
-            k = j / 100 * k;
+            k = (images.width() * j ) / i;
             images.height(k);
         }
 
-        var l = parent.width() - images.width();
-        l = Math.round(l / 2);
-        k = parent.height() - images.height();
-        k = Math.round(k / 2);
+       var l = Math.round((parent.width() - images.width()) / 2);
+        k = Math.round((parent.height() - images.height()) / 2);
         images.css({top: k + 'px', left: l + 'px'});
     }
 

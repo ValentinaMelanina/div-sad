@@ -86,10 +86,9 @@ h1 {
 .section-description {
   font-size: 26px;
   text-align: center;
-  //padding: 0 20%;
   line-height: 34px;
   margin: 0 auto 80px;
-  width: 710px;
+  max-width: 710px;
 }
 @media screen and (max-width: 64em) {
   .section-description {
