@@ -1,7 +1,6 @@
 /* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
 // ==================================================
 
-
 /* Заголовок */
 // ==================================================
 .section-title_children-menu {
@@ -38,7 +37,6 @@
     bottom: -115px;
   }
 }
-
 @media (max-width: 1024px) {
   .section-description_children-menu {
     font-size: 24px;
@@ -53,4 +51,149 @@
       bottom: -104px;
     }
   }
+}
+
+/* Навигация по разделу */
+// ==================================================
+.children-nav__wrap {
+  margin-bottom: 60px;
+  
+  & .children-nav {
+    display: flex;
+    justify-content: center;
+    
+    & .children-nav__item {
+      margin: 0 5px;
+      box-sizing: content-box;
+      position: relative;
+    }
+    
+    & .children-nav__link {
+      display: block;
+      border: 3px solid transparent;
+      background: transparent;
+      font-size: 18px;
+      padding: 23px 40px;
+      line-height: 0;
+      text-transform: none;
+      word-wrap: normal;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.76);
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      position: relative;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-transition: .3s ease-out;
+      transition: .6s ease-out;
+      z-index: 1;
+  
+       &.active {
+         border-radius: 50px;
+        outline: 0;
+         -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+        box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+        background-color: #c9f442;
+        border-color: #3B3C3A;
+        text-decoration: none;
+        transition: background-color .6s ease-in-out;
+      }
+    }
+  }
+}
+.children-nav .children-nav__item .children-nav__link {
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    height: 30px;
+    width: 1px;
+    background: #dad9d9;
+  }
+  &:before {
+    left: -8px;
+  }
+  
+  &.active {
+    &:before {
+      content: none;
+    }
+  }
+  
+  &:first-child {
+    content: none;
+  }
+}
+.children-nav .children-nav__item {
+  &:first-child .children-nav__link {
+    &:before {
+      content: none;
+    }
+  }
+}
+.children-nav .children-nav__item.active + .children-nav__item >.children-nav__link:before {
+  content: none;
+}
+@media screen and (max-width: 760px) {
+  .children-nav {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  
+    &::before,
+    &::after {
+      content: '';
+      width: 100%;
+      order: 1;
+    }
+  
+    & .children-nav__item {
+    
+      &:nth-child(n + 3) {
+        order: 1;
+      }
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  .children-nav {
+    flex-direction: column;
+    text-align: center;
+    
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+
+/* Дополнительный заголовок */
+// ==================================================
+.children-menu__title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Картинка блюда */
+// ==================================================
+.children-menu__img {
+  height: 200px;
+  width: 200px;
+  border-radius: 200px;
+  overflow: hidden;
+  position: relative;
+  margin: 30px 0;
+  
+  & img {
+    position: absolute;
+  }
+}
+
+/* Список блюд */
+// ==================================================
+.children-menu__item {
+  margin-bottom: 12px;
 }
