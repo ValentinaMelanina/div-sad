@@ -28,9 +28,10 @@
   z-index: -1;
   
   & img {
-	opacity: 0.7;
 	position: absolute;
   }
+  
+  & .fullsizeWrap { opacity: 0.7}
 }
 
 /* Контейнер для основного содержимого */

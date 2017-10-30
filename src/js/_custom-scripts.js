@@ -21,21 +21,6 @@ $(document).ready(function(){
             });
         }
 
-    // Навигация по кружкам и секциям
-    var classesNav = document.querySelector(".classes-navigation");
-
-    // Кнопка мобильного меню для навигации по кружкам и секциям
-    var hamburgersClassesNav = document.querySelectorAll(".hamburger-classes");
-    if (hamburgersClassesNav.length > 0) {
-        forEach(hamburgersClassesNav, function (hamburgerClassesNav) {
-            hamburgerClassesNav.addEventListener("click", function () {
-                this.classList.toggle("is-active");
-                classesNav.classList.toggle("active");
-            }, false);
-        });
-    }
-
-
     // Навигация по расписанию занятий
         var $tabs = $('.timetable');
         $tabs.responsiveTabs({
@@ -79,6 +64,7 @@ $(document).ready(function(){
     });
 
 });
+
 
 
 
