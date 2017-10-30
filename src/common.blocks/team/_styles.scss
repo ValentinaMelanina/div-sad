@@ -1,0 +1,36 @@
+/* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
+// ==================================================
+.team {
+  position: relative;
+  background: #F67383 url(../images/floral_bg.png) repeat 0 0/350px auto;
+  color: #fff;
+  
+  &:after {
+	content: "";
+	position: absolute;
+	background: url(../images/flowers-border-3.svg) repeat-x left bottom / 500px auto;
+	height: 202px;
+	width: 100%;
+	top: -201px;
+	left: 0;
+	z-index: 1;
+  }
+}
+
+/* Фото */
+// ==================================================
+.team__img {
+  height: 140px;
+  width: 140px;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+  margin: 30px 0;
+  border: 4px dashed rgba(239, 237, 237, 0.98);
+  display: inline-block;
+  box-sizing: content-box;
+  
+  & img {
+	position: absolute;
+  }
+}

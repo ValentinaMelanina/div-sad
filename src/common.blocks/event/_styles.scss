@@ -6,23 +6,13 @@
   padding-bottom: 70px;
   color: white;
   
-  &:after {
-	content: "";
-	position: absolute;
-	background: url(../images/wave-white.png) repeat-x left bottom / 380px auto;
-	height: 45px;
-	width: 100%;
-	bottom: 0;
-	left: 0;
-	z-index: 1;
-  }
-  
-/* Заголовок */
+  /* Заголовок */
   .section-title {
 	text-transform: uppercase;
 	max-width: 830px;
 	text-align: center;
 	margin: 0 auto;
+	font-size: 30px;
   }
 }
 

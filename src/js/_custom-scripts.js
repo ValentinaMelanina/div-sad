@@ -21,6 +21,21 @@ $(document).ready(function(){
             });
         }
 
+    // Навигация по кружкам и секциям
+    var classesNav = document.querySelector(".classes-navigation");
+
+    // Кнопка мобильного меню для навигации по кружкам и секциям
+    var hamburgersClassesNav = document.querySelectorAll(".hamburger-classes");
+    if (hamburgersClassesNav.length > 0) {
+        forEach(hamburgersClassesNav, function (hamburgerClassesNav) {
+            hamburgerClassesNav.addEventListener("click", function () {
+                this.classList.toggle("is-active");
+                classesNav.classList.toggle("active");
+            }, false);
+        });
+    }
+
+
     // Навигация по расписанию занятий
         var $tabs = $('.timetable');
         $tabs.responsiveTabs({
@@ -62,51 +77,6 @@ $(document).ready(function(){
             +'</div> '
         ));
     });
-
-    //
-    // // Ресайз картинок
-    // var images = $('.img-cover'),
-    //     parent = images.parent(),
-    //     homeImageWidth = images.attr('data-width'),
-    //     homeImageHeight = images.attr('data-height');
-    //
-    // $(window).resize(function() {
-    //     calcReplacementHome();
-    //     toggleResponsiveItemsHome();
-    // });
-    //
-    // function calcReplacementHome() {
-    //     if (! Modernizr.csscalc) {
-    //     }
-    // }
-    //
-    // function toggleResponsiveItemsHome() {
-    //
-    //     if (images.attr('src') != '') {
-    //         resizeHomeImages();
-    //     }
-    // }
-    //
-    // function resizeHomeImages() {
-    //     var i = homeImageWidth,
-    //         j = homeImageHeight;
-    //     if (parent.height() > images.height() || parent.width() < images.width()) {
-    //         images.height(parent.height());
-    //         var k = (images.height() * i ) / j;
-    //         images.width(k);
-    //     }
-    //     if (parent.width() > images.width() || parent.height() < images.height()) {
-    //         images.width(parent.width());
-    //         k = (images.width() * j ) / i;
-    //         images.height(k);
-    //     }
-    //
-    //    var l = Math.round((parent.width() - images.width()) / 2);
-    //     k = Math.round((parent.height() - images.height()) / 2);
-    //     images.css({top: k + 'px', left: l + 'px'});
-    // }
-    //
-    // toggleResponsiveItemsHome();
 
 });
 

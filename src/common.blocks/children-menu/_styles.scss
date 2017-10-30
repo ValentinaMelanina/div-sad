@@ -1,5 +1,20 @@
 /* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
 // ==================================================
+.children-menu {
+  background: url("../images/bg-menu.png") no-repeat center 90px / 1210px;
+  position: relative;
+  
+  &:before {
+	content: "";
+	position: absolute;
+	background: url(../images/wave-white.png) repeat-x left bottom / 380px auto;
+	height: 45px;
+	width: 100%;
+	top: -43px;
+	left: 0;
+	z-index: 1;
+  }
+}
 
 /* Заголовок */
 // ==================================================
@@ -16,7 +31,7 @@
   font-size: 31px;
   line-height: 47px;
   position: relative;
-  margin: 160px auto;
+  margin: 160px auto 195px;
   
   &:before,
   &:after {
@@ -56,75 +71,81 @@
 /* Навигация по разделу */
 // ==================================================
 .children-nav__wrap {
-  margin-bottom: 60px;
+  margin-bottom: 75px;
   
   & .children-nav {
     display: flex;
     justify-content: center;
     
     & .children-nav__item {
-      margin: 0 5px;
+      margin: 5px;
       box-sizing: content-box;
       position: relative;
+  
+	  & .children-nav__link {
+		display: block;
+		border: 3px solid transparent;
+		background: transparent;
+		font-size: 18px;
+		padding: 23px 40px;
+		line-height: 0;
+		text-transform: none;
+		word-wrap: normal;
+		font-weight: bold;
+		color: rgba(0, 0, 0, 0.76);
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		position: relative;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-webkit-transition: .3s ease-out;
+		transition: .6s ease-out;
+		z-index: 1;
+	
+		&.active {
+		  border-radius: 50px;
+		  outline: 0;
+		  -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+		  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
+		  background-color: #c9f442;
+		  border-color: #3B3C3A;
+		  text-decoration: none;
+		  transition: background-color .6s ease-in-out;
+		  
+		  &:before {
+			content: none;
+		  }
+		  
+		  &:after {
+			background: url(../images/owl-15.svg) no-repeat top center / 50px auto;
+			height: 100px;
+			width: 100px;
+			left: 0;
+			top: -68px;
+		  }
+		}
+	 
+		&:before,
+		&:after {
+		  content: "";
+		  position: absolute;
+		}
+		&:before {
+		  left: -8px;
+		  top: 8px;
+		  height: 30px;
+		  width: 1px;
+		  background: #dad9d9;
+		}
+	 
+		&:first-child {
+		  content: none;
+		}
+	  }
     }
-    
-    & .children-nav__link {
-      display: block;
-      border: 3px solid transparent;
-      background: transparent;
-      font-size: 18px;
-      padding: 23px 40px;
-      line-height: 0;
-      text-transform: none;
-      word-wrap: normal;
-      font-weight: bold;
-      color: rgba(0, 0, 0, 0.76);
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      position: relative;
-      cursor: pointer;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      -webkit-transition: .3s ease-out;
-      transition: .6s ease-out;
-      z-index: 1;
-  
-       &.active {
-         border-radius: 50px;
-        outline: 0;
-         -webkit-box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
-        box-shadow: 0 3px 3px 0 rgba(0,0,0,0.14), 0 1px 7px 0 rgba(0,0,0,0.12), 0 3px 1px -1px rgba(0,0,0,0.2);
-        background-color: #c9f442;
-        border-color: #3B3C3A;
-        text-decoration: none;
-        transition: background-color .6s ease-in-out;
-      }
-    }
-  }
-}
-.children-nav .children-nav__item .children-nav__link {
-  
-  &:before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    height: 30px;
-    width: 1px;
-    background: #dad9d9;
-  }
-  &:before {
-    left: -8px;
-  }
-  
-  &.active {
-    &:before {
-      content: none;
-    }
-  }
-  
-  &:first-child {
-    content: none;
+	
   }
 }
 .children-nav .children-nav__item {
@@ -137,7 +158,7 @@
 .children-nav .children-nav__item.active + .children-nav__item >.children-nav__link:before {
   content: none;
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 910px) {
   .children-nav {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -157,7 +178,7 @@
     }
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 525px) {
   .children-nav {
     flex-direction: column;
     text-align: center;
@@ -186,6 +207,8 @@
   overflow: hidden;
   position: relative;
   margin: 30px 0;
+  border: 4px solid rgba(239, 237, 237, 0.98);
+  display: inline-block;
   
   & img {
     position: absolute;
@@ -194,6 +217,9 @@
 
 /* Список блюд */
 // ==================================================
+.children-menu__wrap {
+  margin-bottom: 30px;
+}
 .children-menu__item {
   margin-bottom: 12px;
 }
