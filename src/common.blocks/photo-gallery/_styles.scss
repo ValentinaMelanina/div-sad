@@ -1,0 +1,67 @@
+/* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
+// ==================================================
+.photo-gallery {
+  background: #FAD918;
+  position: relative;
+  padding-bottom: 125px;
+  
+  &:after {
+	content: "";
+	position: absolute;
+	background: url(../images/flowers-border-4.svg) repeat-x left bottom / 500px auto;
+	height: 202px;
+	width: 100%;
+	top: -201px;
+	left: 0;
+	z-index: 1;
+  }
+}
+
+.section-title_photogallery {
+  color: #333;
+}
+
+/* Слайдер с фото */
+// ==================================================
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.photogallery__slider-wrap {
+  padding-bottom: 60px;
+}
+
+.photogallery__item {
+  border-radius: 10px;
+  width: 270px;
+  height: 190px;
+  overflow: hidden;
+}
+.photogallery__link {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  
+  & span {
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	display: inline-block;
+  }
+}
+.photogallery__pagination {
+  
+  & span {
+	height: 22px;
+	width: 22px;
+	margin: 0 8px;
+	background: #fff;
+	opacity: .4;
+	
+	&.swiper-pagination-bullet-active {
+	  background: #70bfe1;
+	  opacity: 1;
+	}
+  }
+}

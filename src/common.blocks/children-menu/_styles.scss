@@ -3,6 +3,8 @@
 .children-menu {
   background: url("../images/bg-menu.png") no-repeat center 90px / 1210px;
   position: relative;
+  padding-bottom: 125px;
+
   
   &:before {
 	content: "";
@@ -10,7 +12,7 @@
 	background: url(../images/wave-white.png) repeat-x left bottom / 380px auto;
 	height: 45px;
 	width: 100%;
-	top: -43px;
+	top: -114px;
 	left: 0;
 	z-index: 1;
   }
@@ -179,14 +181,20 @@
   }
 }
 @media screen and (max-width: 525px) {
-  .children-nav {
-    flex-direction: column;
-    text-align: center;
-    
-    &::before,
-    &::after {
-      content: none;
-    }
+  .children-nav__wrap {
+	
+	& .children-nav {
+	  flex-direction: column;
+	  text-align: center;
+	  
+	  & .children-nav__item {
+		
+		& .children-nav__link:before,
+		& .children-nav__link:after {
+		  content: none;
+		}
+	  }
+	}
   }
 }
 

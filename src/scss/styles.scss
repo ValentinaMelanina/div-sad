@@ -4,6 +4,8 @@
 /* Подключаемые стили */
 @import "vendors/normalize";
 @import "vendors/flexboxgrid";
+@import "vendors/swiper";
+@import "vendors/lightbox";
 
 /* Макет сайта */
 @import "../common.blocks/layout/styles";
@@ -52,6 +54,16 @@
 
 /* Блок с сотрудниками */
 @import "../common.blocks/team/styles";
+
+/* Блок с отзывами */
+@import "../common.blocks/reviews/styles";
+
+/* Блок с фотогалереей */
+@import "../common.blocks/photo-gallery/styles";
+
+/* Блок с новостями */
+@import "../common.blocks/news/styles";
+
 
 
 

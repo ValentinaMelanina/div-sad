@@ -1,0 +1,84 @@
+/* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
+// ==================================================
+.reviews {
+  position: relative;
+  background: #EFEBE8;
+  color: #333;
+  padding-bottom: 130px;
+  
+  &:after {
+	content: "";
+	position: absolute;
+	background: url(../images/wave-grey.png) repeat-x 0 100%/380px auto;
+	height: 45px;
+	width: 100%;
+	top: -44px;
+	left: 0;
+	z-index: 1;
+  }
+}
+.review__list {
+  position: relative;
+  text-align: center;
+}
+.review__item {
+  position: relative;
+  text-align: center;
+}
+
+/* Заголовок */
+// ==================================================
+.section-title_reviews {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Текст отзыва */
+// ==================================================
+.review__text {
+  background: #fff;
+  padding: 70px;
+  border-radius: 15px;
+  margin: 0 38px;
+}
+
+@media screen and (max-width: 500px){
+  .review__text {
+	padding: 15px 15px 75px;
+	margin: 0;
+  }
+}
+
+/* Дополнительная информация */
+// ==================================================
+.review__info {
+  padding: 25px;
+  display: inline-block;
+  
+  & .review__foto {
+	overflow: hidden;
+	height: 90px;
+	width: 90px;
+	border: 5px solid white;
+	box-sizing: content-box;
+	border-radius: 90px;
+	margin: -80px auto 20px;
+  }
+  
+  & .review__author-name {
+	margin-bottom: 10px;
+	font-weight: bold;
+	text-transform: capitalize;
+	font-size: 22px;
+  }
+  
+  & .review__children {
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	opacity: 0.7;
+  }
+}
+
+/* Дополнительная информация */
+// ==================================================

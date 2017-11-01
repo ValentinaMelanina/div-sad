@@ -1,0 +1,52 @@
+/* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
+// ==================================================
+.news {
+  background: #70BEE2;
+  position: relative;
+  padding-bottom: 70px;
+  
+  &:after {
+	content: "";
+	position: absolute;
+	background: url(../images/flowers-border-second.svg)  repeat-x left bottom / 500px auto;
+	height: 202px;
+	width: 100%;
+	top: -201px;
+	left: 0;
+	z-index: 1;
+  }
+}
+
+.newslist-container {
+  padding: 10px;
+  
+  & .newslist-block {
+	background: white;
+	border-radius: 10px;
+	height: 100%;
+	overflow: hidden;
+	
+	& .newslist-img {
+	  
+	  & .news__img {
+		height: 160px;
+		width: 100%;
+		position: relative;
+		display: inline-block;
+	  }
+	}
+	
+	& .newslist-title {
+	  padding: 10px 20px;
+	}
+	
+	& .newslist-content {
+	  padding: 10px 20px;
+	}
+	
+	& .row {
+	  padding: 10px 20px;
+	}
+  }
+  
+}
