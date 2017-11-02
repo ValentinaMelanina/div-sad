@@ -3,7 +3,6 @@
 .news {
   background: #70BEE2;
   position: relative;
-  padding-bottom: 70px;
   
   &:after {
 	content: "";
@@ -14,6 +13,24 @@
 	top: -201px;
 	left: 0;
 	z-index: 1;
+  }
+}
+
+.newslist-wrap {
+
+  & .newslist-container:nth-child(4n) {
+	position: relative;
+	
+	&:before {
+	  content: "";
+	  background: url(../images/owl-3.svg) no-repeat top / 80%;
+	  top: -82px;
+	  right: 40px;
+	  width: 102px;
+	  height: 122px;
+	  position: absolute;
+	  z-index: 1;
+	}
   }
 }
 
@@ -41,11 +58,42 @@
 	}
 	
 	& .newslist-content {
-	  padding: 10px 20px;
+	  padding: 10px 20px 0;
 	}
 	
 	& .row {
-	  padding: 10px 20px;
+	  padding: 10px 25px;
+	  
+	  & .newslist-more {
+		display: block;
+		width: 100%;
+		margin-bottom: 20px;
+		font-weight: bold;
+	  }
+	  
+	  & .newslist-date {
+		color: #333;
+		text-transform: uppercase;
+	  }
+	}
+  }
+  
+  & .newslist-more__link {
+	position: relative;
+	cursor: pointer;
+	margin-right: 22px;
+	
+	&:after {
+	  content: "\f10b";
+	  font-family: "Ionicons";
+	  line-height: 1;
+	  position: absolute;
+	  right: -22px;
+	  bottom: 0;
+	  display: inline-block;
+	  padding-left: 5px;
+	  font-size: 16px;
+	  color: #fad918;
 	}
   }
   

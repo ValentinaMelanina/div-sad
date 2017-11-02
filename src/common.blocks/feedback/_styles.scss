@@ -1,0 +1,121 @@
+/* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
+// ==================================================
+.feedback {
+  position: relative;
+  background: black;
+  padding-bottom: 70px;
+  
+  &:after,
+  &:before {
+	content: "";
+	position: absolute;
+	height: 45px;
+	width: 100%;
+	left: 0;
+	z-index: 2;
+  }
+  &:after {
+	top: -2px;
+	background: url(../images/wave-blue.png) repeat-x left bottom / 380px auto;
+	transform: rotate(180deg);
+  }
+  
+  &:before {
+	bottom: -14px;
+	background: url(../images/wave-white.png) repeat-x left top / 380px auto;
+  }
+  
+  & .feedback-wrap {
+	background: black url(../images/shutterstock_374647894.jpg) no-repeat center /cover;
+	opacity: .7;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+  }
+  
+  & .feedback-container {
+	position: relative;
+	z-index: 2;
+  }
+  
+}
+
+/* Заголовок и подзаголовок */
+// ==================================================
+.section-title_feedback {
+  margin-bottom: 30px;
+}
+.section-description_feedback {
+  color: #fff;
+  font-size: 18px;
+  line-height: 25px;
+  opacity: 0.8;
+  margin: 0 auto 35px;
+}
+
+/* Форма обратной связи */
+.feedback-form-main {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  
+  & .feedback-form-container {
+	margin-bottom: 30px;
+  }
+
+  & .feedback-form-main__input,
+  & .feedback-form-main__textarea {
+	width: 100%;
+	max-width: 600px;
+  }
+  
+  & .feedback-form-main__email {
+	& .feedback-form-main__input {
+	  margin: 0;
+	}
+  }
+  
+  & .feedback-form-main__textarea {
+	height: 100%;
+	min-height: 145px;
+  }
+  
+  & .feedback-form-main__message {
+	height: 100%;
+	margin-left: 20px;
+	position: relative;
+	
+	&:before {
+	  content: "";
+	  background: url(../images/owl-5.svg) no-repeat top/80%;
+	  top: -88px;
+	  right: 40px;
+	  width: 102px;
+	  height: 122px;
+	  position: absolute;
+	  z-index: 1;
+	}
+  }
+}
+
+.feedback-form__button {
+  max-width: 320px;
+  width: 100%;
+  min-width: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .feedback-form-main {
+	
+	.feedback-form-main__message {
+	  margin-left: 0;
+	
+	  &:before {
+		display: none;
+	  }
+	}
+  }
+}

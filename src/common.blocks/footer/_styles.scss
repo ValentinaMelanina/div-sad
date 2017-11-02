@@ -2,4 +2,92 @@
 // ==================================================
 .footer {
   width: 100%;
+  font-size: 14px;
+  
+  & .footer__copyright,
+  & .footer__contact {
+	padding: 0 20px 15px 0;
+  }
+  
+  & .footer__button,
+  & .footer__info,
+  & .footer__address,
+  & .footer__working-hours,
+  & .footer__phone-mail {
+	margin: 0 0 10px 0;
+  }
+  
+  & .footer__phone-mail {
+	padding-left: 20px;
+  }
+  
+  & .footer__button {
+	
+	& .button {
+	  margin-bottom: 10px;
+	  max-width: 310px;
+	  
+	  &:first-child {
+		margin-right: 20px;
+	  }
+	}
+  }
+  
+  & .footer__address {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 25px;
+  }
+  
+  & .footer__social-link {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	border: 1px solid #f4f4f4;
+	background: #f4f4f4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: .3s ease-out;
+	cursor: pointer;
+	
+	&:hover {
+	  text-decoration: none;
+	  background-color: #c9f442;
+	  border-color: #c9f442;
+	  outline: 0;
+	  box-shadow: 0 3px 3px 0 rgba(0,0,0,.14), 0 1px 7px 0 rgba(0,0,0,.12), 0 3px 1px -1px rgba(0,0,0,.2);
+	}
+  }
+  
+  & .footer__copyright {
+	position: relative;
+	padding-left: 85px;
+	
+	&:before {
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  background: url("../images/buggy-blue.svg") no-repeat top center / 100%;
+	  height: 100%;
+	  width: 65px;
+	}
+  }
+  
+}
+
+@media screen and (max-width: 705px) {
+  .footer {
+	
+	& .footer__button {
+	  
+	  & .button {
+		
+		&:first-child {
+		  margin-right: auto;
+		}
+	  }
+	}
+  }
 }

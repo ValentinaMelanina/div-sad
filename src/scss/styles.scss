@@ -19,6 +19,8 @@
 
 /* Поля формы */
 @import "../common.blocks/input/styles";
+@import "../common.blocks/textarea/styles";
+
 
 
 
@@ -63,6 +65,12 @@
 
 /* Блок с новостями */
 @import "../common.blocks/news/styles";
+
+/* Блок с формой обратной связи */
+@import "../common.blocks/feedback/styles";
+
+/* Footer */
+@import "../common.blocks/footer/styles";
 
 
 
