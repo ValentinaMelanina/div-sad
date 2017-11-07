@@ -1,0 +1,93 @@
+/* СТИЛИ ДЛЯ ВСЕГО БЛОКА */
+// ==================================================
+.popup {
+  padding: 100px 20px 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.17);
+  z-index: -9999;
+  
+  &.active {
+	opacity: 1;
+	z-index: 9999;
+	animation-duration: 1s;
+  }
+  
+  & .popup__content {
+	margin: auto;
+	background-color: #fff;
+	position: relative;
+	outline: 0;
+	max-width: 600px;
+	box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+	animation: animatetop 0.4s;
+	transition: all 1s;
+	border-radius: 30px;
+	padding: 62px 10px 10px;
+	width: 100%;
+	text-align: center;
+	overflow: hidden;
+  }
+  
+  & .popup__form {
+	background: #fad918;
+	border-radius: 30px;
+	padding: 40px 20px 55px;
+  }
+  
+  & .popup__title {
+	margin-bottom: 15px;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+  }
+  
+  & .popup__description {
+	opacity: 0.7;
+	margin-bottom: 35px;
+	font-style: italic;
+  }
+  
+  & .popup__input {
+	width: 100%;
+	max-width: 370px;
+  }
+  
+  & .btn-form-wrap {
+	margin-top: 35px;
+  }
+  
+  & .popup__close-btn {
+	position: absolute;
+	cursor: pointer;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	right: 20px;
+	top: 20px;
+	color: #3b3c3a;
+	opacity: 0.4;
+	transition: opacity 1s linear;
+	
+	&:before {
+	  content: "\f405";
+	  display: inline-block;
+	  font-family: "Ionicons";
+	  font-size: 32px;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  width: 32px;
+	  height: 32px;
+	}
+ 
+	&:hover {
+	  opacity: 1;
+	}
+  }
+}

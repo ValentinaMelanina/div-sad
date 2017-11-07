@@ -4,4 +4,62 @@
   color: white;
   text-transform: uppercase;
   font-size: 14px;
+  position: relative;
+  width: 100%;
+}
+
+// Добавление звезд к кнопкам форм
+.btn-form-wrap {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  max-width: 370px;
+  margin: 0 auto;
+  
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+  }
+  
+  &:before {
+    background: url(../images/star-empty.svg) no-repeat 0 100%/auto 22px;
+    height: 23px;
+    width: 23px;
+    bottom: -11px;
+    right: 70px;
+    -webkit-transform: rotate(80deg);
+    transform: rotate(80deg);
+  }
+  
+  &:after {
+    height: 29px;
+    width: 29px;
+    top: -12px;
+    left: 35px;
+    background: url(../images/star-empty.svg) no-repeat 0 100%/auto 28px;
+    -webkit-transform: rotate(85deg);
+    transform: rotate(85deg);
+  }
+  
+  & span {
+	position: relative;
+	width: 100%;
+	display: block;
+	line-height: 1;
+ 
+	&:before {
+	  background: url(../images/star-empty.svg) no-repeat 0 100%/auto 35px;
+	  height: 36px;
+	  width: 36px;
+	  right: 25px;
+	  bottom: -16px;
+	  -webkit-transform: rotate(55deg);
+	  transform: rotate(55deg);
+	  content: "";
+	  position: absolute;
+	  z-index: 2;
+	}
+  }
 }
