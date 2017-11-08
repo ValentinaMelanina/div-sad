@@ -3,8 +3,18 @@
 .event {
   position: relative;
   overflow: hidden;
-  padding-bottom: 70px;
   color: white;
+  
+  &:after {
+	content: "";
+	position: absolute;
+	background: url(../images/wave-white.png) repeat-x left bottom / 380px auto;
+	height: 45px;
+	width: 100%;
+	bottom: -3px;
+	left: 0;
+	z-index: 1;
+  }
 }
 .event-list {
   position: relative;

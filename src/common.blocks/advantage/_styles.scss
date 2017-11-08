@@ -27,6 +27,7 @@
   color: white;
   margin-bottom: 175px;
   padding: 0 4%;
+
 }
 @media screen and (min-width: 48em) {
   .advantage-list {
@@ -37,6 +38,7 @@
   .advantage-list {
 	padding: 0 2%;
 	margin-bottom: 125px;
+
   }
 }
 @media screen and (max-width: 48em) {
@@ -51,6 +53,7 @@
   padding: 0 15px;
   flex-grow:1;
   display: flex;
+  display: -webkit-flex;
 }
 @media screen and (max-width: 64em) {
   .advantage-list .advantage-list__container{
@@ -76,6 +79,7 @@
 .advantage-list__item {
   flex-grow:1;
   display: flex;
+  display: -webkit-flex;
   flex-direction: column;
   align-content: space-between;
   align-items: flex-start;
@@ -115,7 +119,7 @@
 /* Текст */
 // ==================================================
 .advantage-list__text {
-  margin: auto;
+  //margin: auto;
 }
 
 

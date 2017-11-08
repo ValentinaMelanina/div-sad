@@ -9,12 +9,29 @@
   &:after {
 	content: "";
 	position: absolute;
+	display: block;
+	z-index: 1;
 	background: url(../images/wave-grey.png) repeat-x 0 100%/380px auto;
 	height: 45px;
 	width: 100%;
 	top: -44px;
 	left: 0;
-	z-index: 1;
+  }
+  
+  & .container {
+	position: relative;
+	
+	&:before {
+	  content: "";
+	  position: absolute;
+	  display: block;
+	  z-index: 2;
+	  background: url(../images/owl-13.svg) no-repeat top/100%;
+	  top: -75px;
+	  right: 0;
+	  width: 102px;
+	  height: 122px;
+	}
   }
 }
 .review__list {

@@ -4,18 +4,6 @@
   background: url("../images/bg-menu.png") no-repeat center 90px / 1210px;
   position: relative;
   padding-bottom: 125px;
-
-  
-  &:before {
-	content: "";
-	position: absolute;
-	background: url(../images/wave-white.png) repeat-x left bottom / 380px auto;
-	height: 45px;
-	width: 100%;
-	top: -114px;
-	left: 0;
-	z-index: 1;
-  }
 }
 
 /* Заголовок */

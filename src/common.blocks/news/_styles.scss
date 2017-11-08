@@ -44,17 +44,16 @@
 	overflow: hidden;
 	
 	& .newslist-img {
+	  height: 160px;
+	  width: 100%;
+	  position: relative;
+	  display: inline-block;
 	  
-	  & .news__img {
-		height: 160px;
-		width: 100%;
-		position: relative;
-		display: inline-block;
-	  }
 	}
 	
 	& .newslist-title {
 	  padding: 10px 20px;
+	  line-height: 25px;
 	}
 	
 	& .newslist-content {
@@ -78,25 +77,6 @@
 	}
   }
   
-  & .newslist-more__link {
-	position: relative;
-	cursor: pointer;
-	margin-right: 22px;
-	
-	&:after {
-	  content: "\f10b";
-	  font-family: "Ionicons";
-	  line-height: 1;
-	  position: absolute;
-	  right: -22px;
-	  bottom: 0;
-	  display: inline-block;
-	  padding-left: 5px;
-	  font-size: 16px;
-	  color: #fad918;
-	}
-  }
-  
 }
 
 /* Стили для детальной страницы (popup) */
@@ -116,37 +96,55 @@
 	z-index: 3;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+	max-width: 1350px;
+	transition: all .5s ease-in-out;
   }
 }
-
 .newslist-more__link {
+  position: relative;
+  cursor: pointer;
   background: #fad918;
   border-width: 0;
   text-decoration: none;
-  padding: 7px 20px;
+  padding: 7px 45px 7px 20px;
   line-height: 1.5;
   border-radius: 20px;
-  text-transform: uppercase;
   font-size: 80%;
   font-weight: 700;
   margin: 5px 5px 5px 0;
   display: inline-block;
-  cursor: pointer;
   outline: none;
   transition: all .2s ease-in-out;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  
+  &:after {
+	content: "\f10b";
+	font-family: "Ionicons";
+	line-height: 1;
+	position: absolute;
+	right: 20px;
+	bottom: 8px;
+	display: inline-block;
+	padding-left: 5px;
+	font-size: 16px;
+  }
+  
+  &:hover,
+  &:active,
+  &:focus {
+	outline: 0;
+	box-shadow: 0 3px 3px 0 rgba(0,0,0,.14), 0 1px 7px 0 rgba(0,0,0,.12), 0 3px 1px -1px rgba(0,0,0,.2);
+	text-decoration: none;
+  }
 }
-
-
 .morphing-btn-wrap {
   display: inline-block;
   position: relative;
   text-align: center;
 }
-
 .morphing-btn {
   -webkit-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
   -moz-transition: background 0.3s, color 0.2s 0.2s, width 0.2s 0s;
@@ -161,7 +159,6 @@
 	outline: none;
   }
 }
-
 .morphing-btn_circle {
   color: transparent !important;
   padding-left: 0;
@@ -174,7 +171,6 @@
   -o-transition: color 0.2s 0s, width .3s 0.2s;
   transition: color 0.2s 0s, width .3s 0.2s;
 }
-
 .morphing-btn-clone {
   outline: none;
   position: fixed;
@@ -188,7 +184,6 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-
 .morphing-btn-clone_visible {
   display: block;
   -webkit-transform: scale(1) !important;
@@ -197,30 +192,90 @@
   -o-transform: scale(1) !important;
   transform: scale(1) !important;
 }
-
 .fancybox__news .fancybox-bg {
   background: #fad918 url(../images/floral_bg.png) repeat 0 0/350px auto;
   opacity: 1;
 }
-
 .fancybox__news .fancybox-toolbar {
   top: 20px;
   right: 40px;
 }
-
 .fancybox__news .fancybox-button--close {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 50%;
 }
-
 .fancybox__news .fancybox-button--close::after,
 .fancybox__news .fancybox-button--close::before {
   height: 1.55px;
   width: 22px;
   left: calc(50% - 11px);
 }
-
 .fancybox__news .fancybox-button--close:hover {
   background: rgba(0, 0, 0, 0.25);
 }
 
+@media screen and (max-width: 500px) {
+  .fancybox-slide__news {
+	
+	& .news-detail {
+	  margin: 30px auto;
+	  padding: 20px;
+	}
+  }
+}
+
+
+/* Слайдер с картинками */
+// ==================================================
+.news-detail__fotogallery {
+  width: 100%;
+}
+.news-detail__title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.news-detail__text {
+  margin: 10px 0 35px;
+  
+  & ul li {
+	list-style-type: disc;
+	-webkit-margin-start: 30px;
+	padding-left: 5px;
+  }
+}
+.news-detail-date {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 13px;
+  padding-bottom: 5px;
+  white-space: nowrap;
+  text-align: center;
+}
+.news-detail__foto-wrap {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  box-sizing: content-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+.news-detail__foto-item {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+
+/* Видео */
+// ==================================================
+.news-detail__video-item {
+  
+  & video {
+	width: 100%;
+  }
+}

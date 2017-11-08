@@ -435,6 +435,9 @@ ul, li {
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
   -webkit-margin-before: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  -moz-padding-start: 0;
 }
 
 blockquote, q {

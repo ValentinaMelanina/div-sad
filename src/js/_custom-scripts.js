@@ -21,6 +21,8 @@ $(document).ready(function(){
             });
         }
 
+
+
     // Навигация по расписанию занятий
         var $tabs = $('.timetable');
         $tabs.responsiveTabs({
@@ -28,6 +30,8 @@ $(document).ready(function(){
             startCollapsed: false,
             active: 0
         });
+
+
 
     //	Инициализация счетчика обратного отсчета
     $('.event__counter').countdown($('.event__counter').attr('data-start-date'), function(event) {
@@ -63,6 +67,8 @@ $(document).ready(function(){
         ));
     });
 
+
+
     // Анимация для модального окна
     var closeBtnModal = $('.popup__close-btn'),
         popup = $('.popup'),
@@ -82,6 +88,7 @@ $(document).ready(function(){
             popup.removeClass(animationClose + ' ' + activeClass);
         });
     });
+
 
 
     // Кнопка наверх
@@ -109,9 +116,10 @@ $(document).ready(function(){
 
 
 
+    // Детальное описание новости в модальном окне
 
     // Step 1: Create jQuery plugin
-// ============================
+    // ============================
 
     $.fn.fancyMorph = function( opts ) {
 
@@ -275,21 +283,23 @@ $(document).ready(function(){
         return this;
     };
 
+    // Step 2: Start using it!
+    // =======================
 
-// Step 2: Start using it!
-// =======================
+        // $("[data-morphing]").fancyMorph({
+        //     hash : 'morphing'
+        // });
 
-    // $("[data-morphing]").fancyMorph({
-    //     hash : 'morphing'
-    // });
+        $("[data-fancybox__news]").fancyMorph({
+            hash : 'news',
+            type: 'ajax',
+            ajax : {
+                preload : true
+            }
+        });
 
-    $("[data-fancybox__news]").fancyMorph({
-        hash : 'morphing',
-        type: 'ajax',
-        ajax : {
-            preload : true
-        }
-    });
+
+
 
 });
 
